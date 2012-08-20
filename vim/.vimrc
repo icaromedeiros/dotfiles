@@ -15,8 +15,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-autocmd FileType python compiler pylint
-
 set nocompatible
 
 set modelines=0
