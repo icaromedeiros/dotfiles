@@ -47,24 +47,8 @@ alias ..="cd .."
 
 source /usr/local/bin/virtualenvwrapper.sh
 
-#$ Aliases de aplicações e diretórios comuns
 
-alias virtuoso-start="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db; sudo /usr/local/virtuoso-opensource/bin/virtuoso-t -f"
-alias mysql-start="mysql.server start"
-alias virtualenv-start="workon semantica-2"
-alias goto-semantica-dir="cd ~/workspace/app-semantica-sample/app-semantica-site"
-alias goto-app-semantica-dir="cd ~/workspace/app-semantica/semantica"
-alias goto-ef-plugin="cd ~/workspace/app-ef-plugin-semantica"
-alias django-runserver="./manage.py runserver"
-alias solr-start="cd ~/workspace/solr-app-semantica; ./start-solr.sh"
-alias goto-corpus="cd ~/workspace/cubo/poc/corpus"
-alias semantica-tools="mysql-start;  goto-semantica-dir; virtualenv-start; django-runserver;"
-alias init-semantica="goto-semantica-dir; virtualenv-start;"
-alias goto-paa-code="cd ~/Dropbox/PUC/PAA/aulas_code"
-
-## Blog
-
-alias icaromedeiros-ssh="ssh root@50.116.0.180"
+source ~/workspace/dotfiles/bash/.aliases_pessoais
 
 ## Path
 
