@@ -11,7 +11,7 @@ function! <SID>Pep8()
   set grepformat&vim
   set grepformat&vim
   let &grepformat = '%f:%l:%m'
-  let &grepprg = 'pep8 --repeat --ignore=E501,E127,E128'
+  let &grepprg = 'pep8 --repeat --ignore=E501,E126,E127,E128'
   if &readonly == 0 | update | endif
   silent! grep! %
   let &grepformat = l:grepformat_save

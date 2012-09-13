@@ -82,7 +82,7 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 nnoremap ; :
-au FocusLost * :wa
+"au FocusLost * :wa
 
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -124,6 +124,9 @@ map <F2> :call TrimWhiteSpace()<CR>
 
 " PEP mapping (,p is much easier than FN + F5)
 let g:pep8_map='<leader>p'
+
+" Prevents focus lost errors
+autocmd BufLeave,FocusLost * silent! wall
 
 " Shows hidden files in NERDTree
 let NERDTreeShowHidden=1

@@ -47,7 +47,6 @@ alias ..="cd .."
 
 source /usr/local/bin/virtualenvwrapper.sh
 
-
 source ~/workspace/dotfiles/bash/.aliases_pessoais
 
 ## Path
@@ -58,3 +57,5 @@ export PATH="/opt/local/bin:/opt/local/sbin:$BASH_HOME:$PATH"
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
