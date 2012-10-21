@@ -3,3 +3,5 @@
 .netrwhist
 *.pyc
 .aliases_pessoais
+vim/vim/bundle/*
+*.sess # debug sessions

@@ -45,9 +45,7 @@ alias ..="cd .."
 
 ## Python
 
-source /usr/local/bin/virtualenvwrapper.sh
-
-source ~/workspace/dotfiles/bash/.aliases_pessoais
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 ## Path
 
@@ -59,3 +57,11 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+## Virtuoso
+
+export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.5/var/lib/virtuoso/db"
+
+## Aliases
+
+source ~/workspace/dotfiles/bash/.aliases_pessoais
