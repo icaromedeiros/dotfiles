@@ -40,7 +40,7 @@ export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Hom
 ## Common shortcuts
 
 alias ls="ls -G"
-alias ll="ls -ltrGa"
+alias ll="ls -ltrGah"
 alias ..="cd .."
 
 ## Python
