@@ -122,6 +122,7 @@ set showmatch
 set nu
 
 "shows tabs and trailing spaces
+set list
 set listchars=tab:▸\ ,trail:·
 
 " Removes the annoying Press ENTER or type command to continue
@@ -193,7 +194,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.pyc$\|\.pyo$',
   \ }
 
-
 " simple recursive grep
 command! -nargs=1 RecurGrep lvimgrep /<args>/gj ./**/*.* | lopen | set nowrap
 command! -nargs=1 RecurGrepFast silent exec 'lgrep! <q-args> ./**/*.*' | lopen
@@ -205,21 +205,10 @@ nmap ,wr :RecurGrepFast <cword><CR>
 " run pep8+pyflakes validator
 autocmd FileType python map <buffer> ,8 :call Flake8()<CR>
 " rules to ignore (example: "E501,W293")
-let g:flake8_ignore=""
+let g:flake8_ignore="E501,W293"
 
 " don't let pyflakes allways override the quickfix list
 let g:pyflakes_use_quickfix = 0
-
-
-" use 256 colors when possible
-if &term =~? 'mlterm\|xterm\|screen-256'
-	let &t_Co = 256
-    " color
-    colorscheme fisa
-else
-    " color
-    colorscheme delek
-endif
 
 " when scrolling, keep cursor 3 lines away from screen border
 set scrolloff=3
@@ -273,8 +262,13 @@ set history=1000
 set undolevels=1000      
 
 " ignored files
-set wildignore=*.swp,*.bak,*.pyc,*.class
-set wildignore+=*/tmp/*,*.so,*.zip   " Linux/MacOSX
+set suffixes=.swp,.bak,~,.pyc,.class,.so,.zip,.DS_Store
+" NERDTree ignore the same files
+let NERDTreeIgnore = []
+for suffix in split(&suffixes, ',')
+    let escaped_suffix = [ escape(suffix, '.~') . '$' ]
+    let NERDTreeIgnore += escaped_suffix
+endfor
 
 " change the terminal's title
 set title                
