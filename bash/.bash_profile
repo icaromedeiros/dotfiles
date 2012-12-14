@@ -10,6 +10,7 @@ export GREP_OPTIONS="--color=auto"
 ## Git
 
 alias gs="git status"
+alias GS="gs" # fuck off, ghost script
 
 source $BASH_HOME/git-completion.bash
 
@@ -47,6 +48,10 @@ alias ..="cd .."
 
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
+### Pro Sphinx
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 ## Path
 
 export PATH="/opt/local/bin:/opt/local/sbin:$BASH_HOME:$PATH"
@@ -60,7 +65,7 @@ export PATH
 
 ## Virtuoso
 
-export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.5/var/lib/virtuoso/db"
+export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.5/"
 
 ## Aliases
 
