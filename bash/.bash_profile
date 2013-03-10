@@ -12,7 +12,11 @@ export GREP_OPTIONS="--color=auto"
 alias gs="git status"
 alias GS="gs" # fuck off, ghost script
 
+
 source $BASH_HOME/git-completion.bash
+
+# configuração inicial, coloco aonde?
+#exec git config push.default current
 
 PS1='\u@\h \W$(__git_ps1 " (%s)")\$ '
 
