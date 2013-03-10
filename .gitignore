@@ -2,6 +2,5 @@
 *.swo
 .netrwhist
 *.pyc
-.aliases_pessoais
-vim/vim/bundle/*
+vim/vim/*
 *.sess # debug sessions

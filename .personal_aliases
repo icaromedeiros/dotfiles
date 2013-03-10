@@ -1,0 +1,11 @@
+alias virtuoso-start="cd $VIRTUOSO_HOME/var/lib/virtuoso/db; virtuoso-t"
+alias mysql-start="mysql.server start"
+alias thumbor-start="thumbor -l info -k ~/workspace/app-semantica-sample/app-semantica-site/thumbor.key"
+alias solr-start="cd ~/workspace/solr-app-semantica; ./start-solr.sh"
+alias barramento-start="cd ~/workspace/barramento; make start"
+alias elastic-start="sudo /opt/elastic/bin/service/elasticsearch start"
+alias elastic-stop="sudo /opt/elastic/bin/service/elasticsearch stop"
+
+alias goto-semantica-dir="cd ~/workspace/app-semantica-sample/app-semantica-site"
+alias goto-app-semantica-dir="cd ~/workspace/app-semantica/semantica"
+alias django-runserver="./manage.py runserver"
