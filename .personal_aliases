@@ -1,4 +1,4 @@
-alias virtuoso-start="cd $VIRTUOSO_HOME/var/lib/virtuoso/db; virtuoso-t"
+alias virtuoso-start="cd $VIRTUOSO_HOME/var/lib/virtuoso/db; virtuoso-t +foreground"
 alias mysql-start="mysql.server start"
 alias thumbor-start="thumbor -l info -k ~/workspace/app-semantica-sample/app-semantica-site/thumbor.key"
 alias solr-start="cd ~/workspace/solr-app-semantica; ./start-solr.sh"
