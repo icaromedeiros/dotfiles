@@ -69,8 +69,8 @@ export PATH
 
 ## Virtuoso
 
-export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.5/"
+export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.6/"
 
 ## Aliases
 
-source ~/workspace/dotfiles/bash/.aliases_pessoais
+source ~/workspace/dotfiles/.personal_aliases

@@ -81,6 +81,8 @@ Bundle 'YankRing.vim'
 Bundle 'vim-scripts/molokai'
 " N3 and ttl syntax highlighting
 Bundle 'vim-scripts/n3.vim'
+" Tubaina format
+Bundle 'vinibaggio/vim-tubaina'
 """"""""""""""""
 
 " Installing plugins the first time
