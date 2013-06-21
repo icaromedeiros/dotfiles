@@ -5,3 +5,4 @@ symlinks:
 	@ln -sf $(CURDIR)/vim/.vimrc ~/.vimrc
 	@ln -sf $(CURDIR)/vim/.vim ~/.vim
 	@ln -sf $(CURDIR)/bash/.bash_profile ~/.bash_profile
+	@ln -sf $(CURDIR)/zsh/.zshrc ~/.zshrc

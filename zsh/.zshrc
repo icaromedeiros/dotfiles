@@ -51,13 +51,17 @@ alias ls="ls -G"
 alias ll="ls -ltrGah"
 alias ..="cd .."
 
+## Do not correct
+
+alias mvim="nocorrect mvim"
+
 ## Virtuoso
 
 export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.5/"
 
 ## Aliases
 
-source ~/workspace/dotfiles/bash/.aliases_pessoais
+source ~/workspace/dotfiles/.aliases
 
 # Customize to your needs...
-export PATH=/Users/icaro.medeiros/.rvm/gems/ruby-2.0.0-p0/bin:/Users/icaro.medeiros/.rvm/gems/ruby-2.0.0-p0@global/bin:/Users/icaro.medeiros/.rvm/rubies/ruby-2.0.0-p0/bin:/Users/icaro.medeiros/.rvm/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Users/icaro.medeiros/workspace/dotfiles/bash:/Users/icaro.medeiros/Library/Haskell/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbin
+export PATH=/Users/icaro.medeiros/.rvm/gems/ruby-2.0.0-p0/bin:/Users/icaro.medeiros/.rvm/gems/ruby-2.0.0-p0@global/bin:/Users/icaro.medeiros/.rvm/rubies/ruby-2.0.0-p0/bin:/Users/icaro.medeiros/.rvm/bin:/opt/local/bin:/opt/local/sbin:/Users/icaro.medeiros/workspace/dotfiles/bash:/Users/icaro.medeiros/Library/Haskell/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbin
