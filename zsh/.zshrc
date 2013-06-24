@@ -57,7 +57,7 @@ alias mvim="nocorrect mvim"
 
 ## Virtuoso
 
-export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.5/"
+export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.6/"
 
 ## Aliases
 
