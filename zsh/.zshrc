@@ -40,6 +40,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias gs="git status"
 alias GS="gs" # fuck off, ghost script
+export GIT_MERGE_AUTOEDIT=no
 
 ## Java
 
@@ -54,10 +55,15 @@ alias ..="cd .."
 ## Do not correct
 
 alias mvim="nocorrect mvim"
+alias make="nocorrect make"
+
+## Avoiding "too many open files" error
+
+ulimit -n 10000
 
 ## Virtuoso
 
-export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.6/"
+export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.6/var/lib/virtuoso/db"
 
 ## Aliases
 
@@ -65,3 +71,5 @@ source ~/workspace/dotfiles/.aliases
 
 # Customize to your needs...
 export PATH=/Users/icaro.medeiros/.rvm/gems/ruby-2.0.0-p0/bin:/Users/icaro.medeiros/.rvm/gems/ruby-2.0.0-p0@global/bin:/Users/icaro.medeiros/.rvm/rubies/ruby-2.0.0-p0/bin:/Users/icaro.medeiros/.rvm/bin:/opt/local/bin:/opt/local/sbin:/Users/icaro.medeiros/workspace/dotfiles/bash:/Users/icaro.medeiros/Library/Haskell/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbin
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

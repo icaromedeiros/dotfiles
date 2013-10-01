@@ -74,3 +74,7 @@ export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.6/"
 ## Aliases
 
 source ~/workspace/dotfiles/.personal_aliases
+
+export PATH=/Applications/B1FreeArchiver.app/Contents/MacOS:$PATH
+
+# sudo sysctl -w net.local.dgram.maxdgram=4096
