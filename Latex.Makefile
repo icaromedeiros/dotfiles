@@ -1,26 +1,30 @@
 # Using biblatex + biber
 # Use MacTex to install
+#
 
-report: clean
-	@echo "Making report..."
-	@echo "Compiling report..."
-	@pdflatex report.tex
+TARGET="paper"  # change it
+
+build: clean
+	@echo "Compiling latex..."
+	@pdflatex $(TARGET).tex
 	@echo "Compiling bibliography..."
-	@biber report
+	@biber $(TARGET)
 	@clear
-	@echo "Recompiling report..."
-	@pdflatex report.tex
-	@echo "Opening report."
-	@open report.pdf
+	@echo "Recompiling to add bibliography..."
+	@pdflatex $(TARGET).tex
+	@echo "Opening $(TARGET)."
+	@open $(TARGET).pdf
 
-report_bibtex: clean
-	@echo "Making report..."
-	@pdflatex report.tex
-	@bibtex report.aux
-	@pdflatex report.tex
-	@bibtex report.aux
-	@pdflatex report.tex
-	@open report.pdf
+build_bibtex: clean
+	@echo "Compiling latex..."
+	@pdflatex $(TARGET).tex
+	@echo "Compiling bibliography..."
+	@bibtex $(TARGET).aux
+	@pdflatex $(TARGET).tex
+	@echo "Recompiling to add bibliography..."
+	@bibtex $(TARGET).aux
+	@pdflatex $(TARGET).tex
+	@open $(TARGET).pdf
 
 clean:
 	@find . -name "*.bbl" -delete
