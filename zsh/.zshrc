@@ -68,9 +68,25 @@ export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.6/var/lib/virtuoso/db"
 
 ## Aliases
 
-source ~/workspace/dotfiles/.aliases
+alias virtuoso-start="cd $VIRTUOSO_HOME; virtuoso-t +foreground"
+alias mysql-start="mysql.server start"
+alias thumbor-start="thumbor -l info -k ~/workspace/app-semantica-sample/app-semantica-site/thumbor.key"
+alias solr-start="cd ~/workspace/solr-app-semantica; ./start-solr.sh"
+alias barramento-start="cd ~/workspace/barramento; make start"
 
-# Customize to your needs...
+alias elastic-console="/opt/elastic/bin/elasticsearch -f"
+
+alias goto-semantica-dir="cd ~/workspace/app-semantica-sample/app-semantica-site"
+alias goto-app-semantica-dir="cd ~/workspace/app-semantica/semantica"
+alias django-runserver="./manage.py runserver"
+
+alias activemq-start="/opt/apache-activemq-5.8.0/bin/activemq start "
+alias activemq-stop="/opt/apache-activemq-5.8.0/bin/activemq stop"
+alias activemq-console="/opt/apache-activemq-5.8.0/bin/activemq console"
+
+
+# PATH
+
 export PATH=/Users/icaro.medeiros/.rvm/gems/ruby-2.0.0-p247/bin:/Users/icaro.medeiros/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/icaro.medeiros/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/icaro.medeiros/.rvm/bin:/opt/local/bin:/opt/local/sbin:/Users/icaro.medeiros/Library/Haskell/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbin
 
 PATH=$PATH:$HOME/rvm/bin # Add RVM to PATH for scripting
