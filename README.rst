@@ -6,12 +6,25 @@ My dot files (vim, git, zsh, iterm)
 Installing
 ----------
 
-Clone the repository anywhere you want and then create symlinks.
+Simply
 
-ln -s ~/workspace/dotfiles/vim/.vimrc ~/.vimrc
-ln -s ~/workspace/dotfiles/git/.gitconfig ~/.gitconfig
-ln -s ~/workspace/dotfiles/zsh/.zshrc ~/.zshrc
+```sh
+make symlinks
+```
 
+Alternative, manually create symlinks.
+
+```sh
+ln -s ($PATH_TO_MY_DOTFILES)/vim/.vimrc ~/.vimrc
+```
+
+```sh
+ln -s ($PATH_TO_MY_DOTFILES)/git/.gitconfig ~/.gitconfig
+```
+
+```sh
+ln -s ($PATH_TO_MY_DOTFILES)/zsh/.zshrc ~/.zshrc
+```
 
 iTerm2
 ======
