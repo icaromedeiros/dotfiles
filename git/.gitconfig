@@ -1,9 +1,11 @@
 [user]
     name = Icaro Medeiros
     email = icaro.medeiros@gmail.com
-
 [color]
     diff = auto
     status = auto
 [push]
-	default = upstream
+    default = upstream
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
