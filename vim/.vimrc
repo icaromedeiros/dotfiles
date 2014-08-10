@@ -1,98 +1,162 @@
 " no vi-compatible
 set nocompatible
 
-" Setting up Vundle - the vim plugin bundler
-let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-if !filereadable(vundle_readme)
-    echo "Installing Vundle..."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    let iCanHazVundle=0
+"NeoBundle Scripts-----------------------------
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=/Users/icaro.medeiros/.vim/bundle/neobundle.vim/
 endif
 
-" required for vundle
-filetype off
+" Required:
+call neobundle#begin(expand('/Users/icaro.medeiros/.vim/bundle'))
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+" My Bundles here:
 
-" Bundles from GitHub repos:
-
-" Better file browser
-Bundle 'scrooloose/nerdtree'
-" Code commenter
-Bundle 'scrooloose/nerdcommenter'
-" Search and read python documentation
-Bundle 'fs111/pydoc.vim'
-" Code and files fuzzy finder
-Bundle 'kien/ctrlp.vim'
+" git
+NeoBundle 'tpope/vim-fugitive'
+" file/directory handling
+NeoBundle 'scrooloose/nerdtree'
+" parenthesis made easy
+NeoBundle 'tpope/vim-surround'
+" awesome status line
+NeoBundle 'bling/vim-airline'
+" powerline
+NeoBundle 'Lokaltog/powerline'
+NeoBundle 'Lokaltog/powerline-fonts'
+" syntax awesomeness 4all
+NeoBundle 'scrooloose/syntastic'
+" color schemes
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'vim-scripts/molokai'
+NeoBundle 'nanotech/jellybeans.vim'
+" n3 syntax highlighting
+NeoBundle 'vim-scripts/n3.vim'
 " PEP8 and python-flakes checker
-Bundle 'nvie/vim-flake8'
-" Git integration
-Bundle 'motemen/git-vim'
-" Tab list panel
-Bundle 'kien/tabman.vim'
-" Powerline
-Bundle 'Lokaltog/vim-powerline'
-" Terminal Vim with 256 colors colorscheme
-Bundle 'fisadev/fisa-vim-colorscheme'
-" Consoles as buffers
-Bundle 'rosenfeld/conque-term'
-" Pending tasks list
-Bundle 'fisadev/FixedTaskList.vim'
-" Surround
-Bundle 'tpope/vim-surround'
-" Autoclose
-Bundle 'Townk/vim-autoclose'
-" Better python indentation
-Bundle 'vim-scripts/indentpython.vim--nianyang'
-" Indent text object
-Bundle 'michaeljsmith/vim-indent-object'
+NeoBundle 'nvie/vim-flake8'
+" Scope coloring JS
+NeoBundle 'bigfish/vim-js-context-coloring'
 
-" Bundles from vim-scripts repos
 
-" Autocompletition
-Bundle 'AutoComplPop'
-" Python code checker
-Bundle 'pyflakes.vim'
-" Search results counter
-Bundle 'IndexedSearch'
-" XML/HTML tags navigation
-Bundle 'matchit.zip'
-" Gvim colorscheme
-Bundle 'Wombat'
-" Autocompletition inside search
-Bundle 'SearchComplete'
-" Yank history navigation
-Bundle 'YankRing.vim'
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+" You can specify revision/branch/tag.
+"NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+"End NeoBundle Scripts-------------------------
+
+
+"""""""""""""""""""
+"""""""""""""""""""
+""" MY OPTIONS    "
+"""""""""""""""""""
+"""""""""""""""""""
+
+"""""""""""""""""""""""""""""
+"" NeoBundle packages options
+"""""""""""""""""""""""""""""
+
+" syntastic options
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_jshint_exec = 'jshint'
+let g:syntastic_javascript_jshint_post_args = '--config ~/.jshintrc'
+
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_post_args='--ignore=E501,W293'
+" To debug syntastic
+"let g:syntastic_debug = 3
+
+" vim-airline options
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline_powerline_fonts=1
+
+" powerline options
+let g:Powerline_symbols = 'fancy'
+
+""""""""""""""
+"" Visual shit
+""""""""""""""
+
+color jellybeans
+
+" jellybeans options
+let g:jellybeans_overrides = {
+\    'Search': { 'guifg': 'e32636', 'guibg': '302028',
+\                'ctermfg': 'Black', 'ctermbg': 'Yellow',
+\                'attr': 'bold' },
+\}
+
+" The chosen one because it has italic, bold, etc
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h22
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set termencoding=utf-8
+
+"""""""""""""""""""""""""""""
+"" file and nerd-tree options
+"""""""""""""""""""""""""""""
+nmap <leader>n :NERDTreeToggle<CR>
+
+let NERDTreeShowHidden=1
+
+" ignored files
+set suffixes=.swp,.bak,~,.pyc,.class,.so,.zip,.DS_Store
+
+" NERDTree ignore the same files
+let NERDTreeIgnore = ['data$[[dir]]', '__pycache__']
+for suffix in split(&suffixes, ',')
+    let escaped_suffix = [ escape(suffix, '.~') . '$' ]
+    let NERDTreeIgnore += escaped_suffix
+endfor
+
+""""""""""
+"" flake8
+""""""""""
+
+" run pep8+pyflakes validator
+autocmd FileType python map <buffer> ,8 :call Flake8()<CR>
+" rules to ignore (example: "E501,W293")
+let g:flake8_ignore="E501,W293"
+" don't let pyflakes allways override the quickfix list
+let g:pyflakes_use_quickfix = 0
+
+""""""""""
+"" vim-js-context-coloring
+""""""""""
+
+let g:js_context_colors_enabled = 0
+
+""""""""""
+"" search
+""""""""""
+
+" highlighted search results
+set hlsearch
+" ignore case when searching if string being search is all lower case
+set ignorecase
+set smartcase
+
+" ,<space> disables last search highlighting
+nnoremap <leader><space> :noh<cr>
 
 """"""""""""""""
-"" My bundles
+"" Other options
 """"""""""""""""
-" Molokai color
-Bundle 'vim-scripts/molokai'
-" N3 and ttl syntax highlighting
-Bundle 'vim-scripts/n3.vim'
-" Tubaina format
-Bundle 'vinibaggio/vim-tubaina'
-""""""""""""""""
-
-" Installing plugins the first time
-if iCanHazVundle == 0
-    echo "Installing Bundles, please ignore key map error messages"
-    echo ""
-    :BundleInstall
-endif
-
-" allow plugins by file type
-filetype plugin on
-filetype indent on
 
 " tabs and spaces handling
 set expandtab
@@ -100,236 +164,38 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set number
-
-" tablength exceptions
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-
-" always show status bar
-set ls=2
-
-" incremental search
-set incsearch
-
-" highlighted search results
-set hlsearch
-
-" show matched ( when inserting )
-set showmatch
-
 " line numbers
 set nu
-
-"shows tabs and trailing spaces
+" always show status bar
+set ls=2
+" use many muchos levels of undo
+set undolevels=1000
+" map leader (for shortcuts)
+let mapleader = ","
+" shows tabs and trailing spaces
 set list
 set listchars=tab:▸\ ,trail:·
-
-" Removes the annoying Press ENTER or type command to continue
-set shortmess=atI
-
-" tab navigation
-map tn :tabn<CR>
-map tp :tabp<CR>
-map tm :tabm<CR>
-map tt :tabnew 
-map <C-S-Right> :tabn<CR>
-imap <C-S-Right> <ESC>:tabn<CR>
-map <C-S-Left> :tabp<CR>
-imap <C-S-Left> <ESC>:tabp<CR>
-
-" automatically close autocompletition window
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-" old autocomplete keyboard shortcut
-imap <C-J> <C-X><C-O>
-
-" show pending tasks list
-map <F2> :TaskList<CR>
-
-" Complete Behaviour
-let OmniCpp_MayCompleteDot = 0
-let OmniCpp_MayCompleteArrow = 0
-let OmniCpp_MayCompleteScope = 0
-" When 'completeopt' does not contain "longest", Vim automatically select the first entry of the popup menu. You can 
-" change this behaviour with the OmniCpp_SelectFirstItem option.
-let OmniCpp_SelectFirstItem = 0
-
-" debugger keyboard shortcuts
-map <F5> :Dbg over<CR>
-map <F6> :Dbg into<CR>
-map <F7> :Dbg out<CR>
-map <F8> :Dbg here<CR>
-map <F9> :Dbg break<CR>
-map <F10> :Dbg watch<CR>
-map <F11> :Dbg down<CR>
-map <F12> :Dbg up<CR>
-
-" CtrlP (new fuzzy finder)
-let g:ctrlp_map = ',e'
-nmap ,g :CtrlPBufTag<CR>
-nmap ,G :CtrlPBufTagAll<CR>
-nmap ,f :CtrlPLine<CR>
-nmap ,m :CtrlPMRUFiles<CR>
-" to be able to call CtrlP with default search text
-function! CtrlPWithSearchText(search_text, ctrlp_command_end)
-    execute ':CtrlP' . a:ctrlp_command_end
-    call feedkeys(a:search_text)
-endfunction
-" CtrlP with default text
-nmap ,wg :call CtrlPWithSearchText(expand('<cword>'), 'BufTag')<CR>
-nmap ,wG :call CtrlPWithSearchText(expand('<cword>'), 'BufTagAll')<CR>
-nmap ,wf :call CtrlPWithSearchText(expand('<cword>'), 'Line')<CR>
-nmap ,d ,wg
-nmap ,D ,wG
-nmap ,we :call CtrlPWithSearchText(expand('<cword>'), '')<CR>
-nmap ,pe :call CtrlPWithSearchText(expand('<cfile>'), '')<CR>
-nmap ,wm :call CtrlPWithSearchText(expand('<cword>'), 'MRUFiles')<CR>
-" Don't change working directory
-let g:ctrlp_working_path_mode = 0
-" Ignore files on fuzzy finder
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
-  \ 'file': '\.pyc$\|\.pyo$',
-  \ }
-
-" simple recursive grep
-command! -nargs=1 RecurGrep lvimgrep /<args>/gj ./**/*.* | lopen | set nowrap
-command! -nargs=1 RecurGrepFast silent exec 'lgrep! <q-args> ./**/*.*' | lopen
-nmap ,R :RecurGrep 
-nmap ,r :RecurGrepFast 
-nmap ,wR :RecurGrep <cword><CR>
-nmap ,wr :RecurGrepFast <cword><CR>
-
-" run pep8+pyflakes validator
-autocmd FileType python map <buffer> ,8 :call Flake8()<CR>
-" rules to ignore (example: "E501,W293")
-let g:flake8_ignore="E501,W293"
-
-" don't let pyflakes allways override the quickfix list
-let g:pyflakes_use_quickfix = 0
-
-" when scrolling, keep cursor 3 lines away from screen border
-set scrolloff=3
-
-" autocompletition of files and commands behaves like shell
-" (complete only the common part, list the options that match)
-set wildmode=list:longest
-
-" Fix to let ESC work as espected with Autoclose plugin
-let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
-
-" to use fancy symbols for powerline, uncomment the following line and use a
-" patched font (more info on the README.rst)
-" let g:Powerline_symbols = 'fancy'
-
-"""""""""""""""
-""" My configs
-"""""""""""""""
-let mapleader = ","
-
-"Color scheme
-colorscheme molokai
-
-" Encoding!
-set encoding=utf-8
-
-" ignore case when searching if search is all lower case
-set ignorecase
-set smartcase
-
-" better completion for commands
-set wildmenu
-set wildmode=list:longest,list,full
-
-" hihgligth for current line
-set cursorline
-
-" fast redrawing
-set ttyfast
-
-" no backup ~ files
-set nobackup
-
-" no .swp files
-set noswapfile
-
-" remember more commands and search history
-set history=1000
-
-" use many muchos levels of undo
-set undolevels=1000      
-
-" ignored files
-set suffixes=.swp,.bak,~,.pyc,.class,.so,.zip,.DS_Store
-" NERDTree ignore the same files
-let NERDTreeIgnore = []
-for suffix in split(&suffixes, ',')
-    let escaped_suffix = [ escape(suffix, '.~') . '$' ]
-    let NERDTreeIgnore += escaped_suffix
-endfor
-
-" change the terminal's title
-set title                
-
 " don't beep
-set visualbell           
+set visualbell
 set noerrorbells
 
-" /g in substitute is on by default
-set gdefault
-
-" Do not close buffers, only hide them.
-" Really great for undo buffers, for example.
-set hidden
-
-
-" THIS IS GREAT!
-" Eliminates the need of shift up and down when
-" using commands (e.g. :w is now ;w)
-nnoremap ; :
-
-" Best font, best size
-if has("gui_running")
-   set guifont=Inconsolata:h16
-endif
-
-" Removes toolbar
-set guioptions-=T
-
-" Removes trailing spaces
-"function! TrimWhiteSpace()
-"  :retab
-"  %s/\s*$//
-"  ''
-":endfunction
-"map <leader>w :call TrimWhiteSpace()<CR>
-
-" no folds
-set nofoldenable
-
-" Prevents focus lost errors
-autocmd BufLeave,FocusLost * silent! wall
-
-" Open/Close NERDTree
-map <F1> :NERDTreeToggle<CR>
-nmap <leader>n :NERDTreeToggle<CR>
-
-" Shows hidden files in NERDTree
-let NERDTreeShowHidden=1
-
-" Save as root
-cmap w!! w !sudo tee % >/dev/null
-
-" pydoc binary
-let g:pydoc_cmd = '/usr/bin/pydoc2.7'
-
-" , <space> it disables last search highlighting
-nnoremap <leader><space> :noh<cr>
+function! TrimWhiteSpace()
+  :retab
+  %s/\s*$//
+  ''
+:endfunction
+map <leader>w :call TrimWhiteSpace()<CR>
 
 " RDF Notation 3 Syntax
 augroup filetypedetect
 au BufNewFile,BufRead *.n3  setfiletype n3
 au BufNewFile,BufRead *.ttl  setfiletype n3
 augroup END
+
+""""""""""""""""""""""""""""""""""
+"" LIST OF SHORTCUTS AND MNEMONICS
+""""""""""""""""""""""""""""""""""
+
+" <leader>w(HITESPACE) trim whitespaces
+" <leader>n(ERDTree)
+" <leader><space> clear search highlight (equals to :noh)
