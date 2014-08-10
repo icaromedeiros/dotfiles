@@ -13,7 +13,7 @@ Simply
 make symlinks
 ```
 
-Alternative, manually create symlinks.
+Alternatively, manually create symlinks.
 
 ```sh
 ln -s ($PATH_TO_MY_DOTFILES)/vim/.vimrc ~/.vimrc
