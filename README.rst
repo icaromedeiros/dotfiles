@@ -1,17 +1,19 @@
 Introduction
 ------------
 
-These are my vim configuration files and bundles.
+My dot files (vim, git, zsh, iterm)
 
 Installing
 ----------
 
-Clone the repository anywhere you want and then create symlinks to:
+Clone the repository anywhere you want and then create symlinks.
 
-* .vimrc in the user home (~/.vimrc)
-* .vim in the user home (~/.vim/)
+ln -s ~/workspace/dotfiles/vim/.vimrc ~/.vimrc
+ln -s ~/workspace/dotfiles/git/.gitconfig ~/.gitconfig
+ln -s ~/workspace/dotfiles/zsh/.zshrc ~/.zshrc
+
 
 iTerm2
 ======
 
-iTerm2.plist should be installed in ~/Library/Preferences under the name com.googlecode.iterm2.plist
+iTerm Configuration preferences (.plist file) should be installed in ~/Library/Preferences under the name `com.googlecode.iterm2.plist`
