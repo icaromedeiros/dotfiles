@@ -3,16 +3,17 @@ Introduction
 
 My dot files (vim, git, zsh, iterm)
 
-Installing
-----------
+Installing symlinks
+-------------------
 
 Simply
+
 
 ```sh
 make symlinks
 ```
 
-Alternative, manually create symlinks.
+Alternatively, manually create symlinks.
 
 ```sh
 ln -s ($PATH_TO_MY_DOTFILES)/vim/.vimrc ~/.vimrc
@@ -27,6 +28,6 @@ ln -s ($PATH_TO_MY_DOTFILES)/zsh/.zshrc ~/.zshrc
 ```
 
 iTerm2
-======
+------
 
 iTerm Configuration preferences (.plist file) should be installed in ~/Library/Preferences under the name `com.googlecode.iterm2.plist`
