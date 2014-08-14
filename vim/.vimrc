@@ -1,3 +1,6 @@
+" fish shell unfriendly
+set shell=bash
+
 " no vi-compatible
 set nocompatible
 
@@ -22,6 +25,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tpope/vim-fugitive'
 " file/directory handling
 NeoBundle 'scrooloose/nerdtree'
+" fuzzy file/directory finder, etc
+NeoBundle 'kien/ctrlp.vim'
 " parenthesis made easy
 NeoBundle 'tpope/vim-surround'
 " awesome status line
@@ -35,13 +40,16 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/molokai'
 NeoBundle 'nanotech/jellybeans.vim'
-" n3 syntax highlighting
-NeoBundle 'vim-scripts/n3.vim'
+" Python autocompletion
+NeoBundle 'davidhalter/jedi-vim'
 " PEP8 and python-flakes checker
 NeoBundle 'nvie/vim-flake8'
+" n3 syntax highlighting
+NeoBundle 'vim-scripts/n3.vim'
 " Scope coloring JS
 NeoBundle 'bigfish/vim-js-context-coloring'
-
+" Completion in insert mode, just using tab
+NeoBundle 'ervandew/supertab'
 
 " Required:
 call neobundle#end()
@@ -64,6 +72,17 @@ NeoBundleCheck
 """ MY OPTIONS    "
 """""""""""""""""""
 """""""""""""""""""
+
+"""""""""""""""""""""""""""
+"" pretty great differences
+"""""""""""""""""""""""""""
+
+" map leader -- for shortcuts: \ is far way , is better
+let mapleader=","
+
+" no need to SHIFT to use commands :)
+nnoremap ; :
+
 
 """""""""""""""""""""""""""""
 "" NeoBundle packages options
@@ -98,10 +117,13 @@ let g:jellybeans_overrides = {
 \    'Search': { 'guifg': 'e32636', 'guibg': '302028',
 \                'ctermfg': 'Black', 'ctermbg': 'Yellow',
 \                'attr': 'bold' },
+\    'Todo': { 'guifg': 'f63232', 'guibg': 'f1e905',
+\                'ctermfg': 'Magenta', 'ctermbg': 'Yellow',
+\                'attr': 'bold' }
 \}
 
 " The chosen one because it has italic, bold, etc
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h22
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h20
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
@@ -115,7 +137,7 @@ nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " ignored files
-set suffixes=.swp,.bak,~,.pyc,.class,.so,.zip,.DS_Store
+set suffixes=.swp,.bak,~,.pyc,.class,.so,.zip,.DS_Store,.orig
 
 " NERDTree ignore the same files
 let NERDTreeIgnore = ['data$[[dir]]', '__pycache__']
@@ -158,6 +180,12 @@ nnoremap <leader><space> :noh<cr>
 "" Other options
 """"""""""""""""
 
+" no hidden buffers
+set nohidden
+
+" no swaps
+set noswapfile
+
 " tabs and spaces handling
 set expandtab
 set tabstop=4
@@ -170,8 +198,6 @@ set nu
 set ls=2
 " use many muchos levels of undo
 set undolevels=1000
-" map leader (for shortcuts)
-let mapleader = ","
 " shows tabs and trailing spaces
 set list
 set listchars=tab:▸\ ,trail:·
