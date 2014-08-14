@@ -1,0 +1,67 @@
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git brew capistrano github pip python ruby rvm npm)
+
+source $ZSH/oh-my-zsh.sh
+
+# Without this, zsh is painfully slow
+DISABLE_UPDATE_PROMPT=true
+DISABLE_AUTO_UPDATE=true
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+COMPLETION_WAITING_DOTS="true"
+
+## Git
+
+alias gs="git status"
+alias GS="gs" # fuck off, ghost script
+alias "gsub"="git submodule update"
+export GIT_MERGE_AUTOEDIT=no
+
+## Java
+
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home"
+
+## Common shortcuts
+
+alias ls="ls -G"
+alias ll="ls -ltrGah"
+alias ..="cd .."
+
+## Do not correct
+
+alias mvim="nocorrect mvim"
+alias make="nocorrect make"
+
+## Avoiding "too many open files" error
+
+ulimit -n 10000
+
+## Virtuoso
+
+export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.6/var/lib/virtuoso/db"
+
+## ATOMice
+
+export ATOM_PATH="/Applications"
+
+## Aliases
+
+alias virtuoso-start="cd $VIRTUOSO_HOME; virtuoso-t +foreground"
+alias mysql-start="mysql.server start"
+alias thumbor-start="thumbor -l info -k ~/workspace/app-semantica-sample/app-semantica-site/thumbor.key"
+alias solr-start="cd ~/workspace/solr-app-semantica; ./start-solr.sh"
+alias barramento-start="cd ~/workspace/barramento; make start"
+
+alias elastic-console="/opt/elastic/bin/elasticsearch -f"
+
+alias goto-semantica-dir="cd ~/workspace/app-semantica-sample/app-semantica-site"
+alias goto-app-semantica-dir="cd ~/workspace/app-semantica/semantica"
+alias django-runserver="./manage.py runserver"
+
+alias activemq-start="/opt/apache-activemq-5.8.0/bin/activemq start "
+alias activemq-stop="/opt/apache-activemq-5.8.0/bin/activemq stop"
+alias activemq-console="/opt/apache-activemq-5.8.0/bin/activemq console"
+
+alias tsr="tsuru"
