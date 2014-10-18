@@ -95,6 +95,13 @@ let g:syntastic_javascript_jshint_post_args = '--config ~/.jshintrc'
 
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_post_args='--ignore=E501,W293'
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol='✗✗'
+let g:syntastic_style_error_symbol='✗S'
+let g:syntastic_warning_symbol='⚠⚠'
+let g:syntastic_style_warning_symbol='⚠S'
+
 " To debug syntastic
 "let g:syntastic_debug = 3
 
@@ -123,7 +130,7 @@ let g:jellybeans_overrides = {
 \}
 
 " The chosen one because it has italic, bold, etc
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h20
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h18
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
@@ -140,7 +147,7 @@ let NERDTreeShowHidden=1
 set suffixes=.swp,.bak,~,.pyc,.class,.so,.zip,.DS_Store,.orig
 
 " NERDTree ignore the same files
-let NERDTreeIgnore = ['data$[[dir]]', '__pycache__']
+let NERDTreeIgnore = ['__pycache__']
 for suffix in split(&suffixes, ',')
     let escaped_suffix = [ escape(suffix, '.~') . '$' ]
     let NERDTreeIgnore += escaped_suffix
