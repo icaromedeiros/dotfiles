@@ -72,7 +72,7 @@ export GIT_MERGE_AUTOEDIT=no
 
 ## Java
 
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"
 
 ## Common shortcuts
 
