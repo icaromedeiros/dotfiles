@@ -1,4 +1,4 @@
-.PHONY: vim git
+.PHONY: vim git jshint
 git:
 	@echo "Installing .gitconfig"
 	@ln -sf $(CURDIR)/git/.gitconfig ~/.gitconfig
@@ -23,7 +23,7 @@ packages:
 	@brew tap tsuru/homebrew-tsuru
 	@brew install tsuru tsuru-admin crane
 python:
-	@pip install virtualenvwrapper
+	@pip install virtualenvwrapper pep8 flake8
 zsh:
 	@echo "Installing zsh..."
 	@curl -L http://install.ohmyz.sh | sh
@@ -38,3 +38,7 @@ vim:
 	@echo "Installing .vimrc"
 	@ln -sf $(CURDIR)/vim/.vimrc ~/.vimrc
 	@echo "Done."
+jshint:
+	@echo "Installing JShint"
+	@sudo npm install jshint --global
+	@ln -s $(CURDIR)/jshint/.jshintrc ~/.jshintrc
