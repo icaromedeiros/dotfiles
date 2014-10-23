@@ -12,12 +12,18 @@ other:
 	@defaults write com.apple.LaunchServices LSQuarantine -bool NO
 	@echo "Done."
 brew:
-	@echo "Installing brew...\n"
+	@echo "Installing brew..."
 	@ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	@brew update
 # Install brew packages
 packages:
-	@brew install git python ruby node
+	@echo "Installing brew packages..."
+	@brew update
+	@brew install git python node rbenv ruby-build virtuoso redis activemq gradle
+	@brew tap tsuru/homebrew-tsuru
+	@brew install tsuru tsuru-admin crane
+python:
+	@pip install virtualenvwrapper
 zsh:
 	@echo "Installing zsh..."
 	@curl -L http://install.ohmyz.sh | sh

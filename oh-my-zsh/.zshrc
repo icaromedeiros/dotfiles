@@ -43,7 +43,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/Users/icaro.medeiros/.config/fish/bin:/Users/icaro.medeiros/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=pt_BR.UTF-8
@@ -74,6 +73,10 @@ export GIT_MERGE_AUTOEDIT=no
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"
 
+## Ruby
+
+eval "$(rbenv init -)"
+
 ## Common shortcuts
 
 alias ls="ls -G"
@@ -89,13 +92,13 @@ alias make="nocorrect make"
 
 ulimit -n 10000
 
+## Brew
+
+export HOMEBREW_GITHUB_API_TOKEN=fbe5737441e5a138cc9f9e3d55d50bf52f3a9336
+
 ## Virtuoso
 
-export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso/6.1.6/var/lib/virtuoso/db"
-
-## ATOMice
-
-export ATOM_PATH="/Applications"
+export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso616/6.1.6/var/lib/virtuoso/db"
 
 ## Aliases
 
@@ -105,14 +108,6 @@ alias thumbor-start="thumbor -l info -k ~/workspace/app-semantica-sample/app-sem
 alias solr-start="cd ~/workspace/solr-app-semantica; ./start-solr.sh"
 alias barramento-start="cd ~/workspace/barramento; make start"
 
-alias elastic-console="/opt/elastic/bin/elasticsearch -f"
-
-alias goto-semantica-dir="cd ~/workspace/app-semantica-sample/app-semantica-site"
-alias goto-app-semantica-dir="cd ~/workspace/app-semantica/semantica"
-alias django-runserver="./manage.py runserver"
-
-alias activemq-start="/opt/apache-activemq-5.8.0/bin/activemq start "
-alias activemq-stop="/opt/apache-activemq-5.8.0/bin/activemq stop"
-alias activemq-console="/opt/apache-activemq-5.8.0/bin/activemq console"
+alias uatu-start="cd ~/workspace/uatu; make run"
 
 alias tsr="tsuru"
