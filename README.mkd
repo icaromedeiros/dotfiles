@@ -14,7 +14,7 @@ For example, to install vim packages and configurations:
 make vim
 ```
 
-To install everything, use
+To install everything, use:
 
 ```
 make all
