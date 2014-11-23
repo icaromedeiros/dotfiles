@@ -1,33 +1,21 @@
 Introduction
 ------------
 
-My dot files (vim, git, zsh, iterm)
+My dot files, including configurations for vim, git, zsh, iTerm, and OS X.
 
-Installing symlinks
--------------------
+Installing
+----------
 
-Simply
+Just clone the repo and use make commands to install configurations.
 
+For example, to install vim packages and configurations:
 
-```sh
-make symlinks
+```
+make vim
 ```
 
-Alternatively, manually create symlinks.
+To install everything, use
 
-```sh
-ln -s ($PATH_TO_MY_DOTFILES)/vim/.vimrc ~/.vimrc
 ```
-
-```sh
-ln -s ($PATH_TO_MY_DOTFILES)/git/.gitconfig ~/.gitconfig
+make all
 ```
-
-```sh
-ln -s ($PATH_TO_MY_DOTFILES)/zsh/.zshrc ~/.zshrc
-```
-
-iTerm2
-------
-
-iTerm Configuration preferences (.plist file) should be installed in ~/Library/Preferences under the name `com.googlecode.iterm2.plist`
