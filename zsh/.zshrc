@@ -90,7 +90,8 @@ alias make="nocorrect make"
 
 ## Avoiding "too many open files" error
 
-ulimit -n 10000
+ulimit -n 65536
+ulimit -u 2048
 
 ## Brew
 

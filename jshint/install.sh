@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Installing JShint..."
 sudo npm install jshint --global
 
-echo "Installing .jshintrc..."
+echo "Symlinking .jshintrc..."
 ln -s $DIR/.jshintrc ~/.jshintrc
 
 echo "Done." 

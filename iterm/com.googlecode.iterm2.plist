@@ -229,7 +229,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>302</string>
+		<string>319</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -242,11 +242,11 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 194 592 584 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 598 399 0 0 1280 777 </string>
+	<string>0 10 1279 762 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>30 16 1279 761 0 0 1280 777 </string>
+	<string>0 199 1225 572 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>79 10 1306 761 0 0 1280 777 </string>
+	<string>79 220 730 551 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>194 -284 1162 764 0 0 1280 778 </string>
 	<key>New Bookmarks</key>
@@ -428,7 +428,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>10.739461898803711</real>
+			<real>15</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -954,7 +954,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.21231046319007874</real>
+			<real>0.23371624946594238</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1047,7 +1047,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-10-23T19:17:15Z</date>
+	<date>2014-11-17T13:24:43Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -4886,6 +4886,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.0.0.20141022</string>
+	<string>2.0.0.20141103</string>
 </dict>
 </plist>
