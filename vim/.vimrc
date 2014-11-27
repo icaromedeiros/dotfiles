@@ -47,6 +47,8 @@ NeoBundle 'vim-scripts/n3.vim'
 NeoBundle 'bigfish/vim-js-context-coloring'
 " Completion in insert mode, just using tab
 NeoBundle 'ervandew/supertab'
+" Scala highlighting
+NeoBundle 'derekwyatt/vim-scala'
 
 " Required:
 call neobundle#end()

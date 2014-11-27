@@ -40,3 +40,8 @@ brew install tsuru tsuru-admin crane
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Java/Scala
+brew install maven
+brew install scala sbt
+brew install hadoop apache-spark kafka typesafe-activator
