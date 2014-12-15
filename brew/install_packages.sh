@@ -15,7 +15,7 @@ brew update
 echo "Installing brew packages..."
 
 # Essentials
-brew install git
+brew install git wget
 
 # Python
 brew install python
