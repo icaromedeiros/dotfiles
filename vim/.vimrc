@@ -99,7 +99,8 @@ let g:syntastic_tex_checkers = ['chktex']
 " ignored rules
 " 1: command terminated with a space (e.g. \printbibliography without {})
 " 2: ignores ~\ref warnings
-let g:syntastic_tex_chktex_post_args='-n1 -n2'
+" 11: ldots instead of .. (conflicts with directory up)
+let g:syntastic_tex_chktex_post_args='-n1 -n2 -n11'
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
