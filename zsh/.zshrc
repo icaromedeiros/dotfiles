@@ -97,6 +97,11 @@ ulimit -u 2048
 
 export HOMEBREW_GITHUB_API_TOKEN=fbe5737441e5a138cc9f9e3d55d50bf52f3a9336
 
+## R
+# Disables r built-in command
+disable r
+export RSTUDIO_WHICH_R=/usr/local/bin/r
+
 ## Virtuoso
 
 export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso616/6.1.6/var/lib/virtuoso/db"

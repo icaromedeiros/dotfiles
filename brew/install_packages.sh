@@ -45,3 +45,9 @@ brew cleanup
 brew install maven
 brew install scala sbt
 brew install hadoop apache-spark kafka typesafe-activator
+
+
+# R
+brew tap homebrew/science
+brew install Caskroom/cask/xquartz
+brew install r
