@@ -38,16 +38,43 @@ brew install gradle
 brew tap tsuru/homebrew-tsuru
 brew install tsuru tsuru-admin crane
 
-# Remove outdated versions from the cellar.
-brew cleanup
-
 # Java/Scala
 brew install maven
 brew install scala sbt
 brew install hadoop apache-spark kafka typesafe-activator
 
-
 # R
 brew tap homebrew/science
 brew install Caskroom/cask/xquartz
 brew install r
+
+###
+# Casks
+###
+brew install caskroom/cask/brew-cask
+
+# Dev tools
+brew cask install atom macvim rstudio gitx iterm2
+brew cask install java eclipse-java
+
+# Science, bitch
+brew cask install mactex mendeley-desktop
+
+# Browsers
+brew cask install firefox google-chrome
+
+# (Free)? entertainment
+brew cask install chromecast spotify subtitles vuze simple-comic
+
+# Communication
+brew cask install adium slack skype
+
+# Other
+brew cask install android-file-transfer caffeine dropbox dropbox-encore evernote spectacle
+
+###
+# Cleanup
+###
+
+# Remove outdated versions from the cellar.
+brew cleanup
