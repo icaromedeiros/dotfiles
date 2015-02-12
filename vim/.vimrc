@@ -49,6 +49,9 @@ NeoBundle 'bigfish/vim-js-context-coloring'
 NeoBundle 'ervandew/supertab'
 " Scala highlighting
 NeoBundle 'derekwyatt/vim-scala'
+" Puppet
+NeoBundle 'rodjek/vim-puppet'
+
 
 " Required:
 call neobundle#end()

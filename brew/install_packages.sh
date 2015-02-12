@@ -48,13 +48,16 @@ brew tap homebrew/science
 brew install Caskroom/cask/xquartz
 brew install r
 
+# Other
+brew install pandoc
+
 ###
 # Casks
 ###
 brew install caskroom/cask/brew-cask
 
 # Dev tools
-brew cask install atom macvim rstudio gitx iterm2
+brew cask install atom macvim rstudio gitx iterm2 sequel-pro
 brew cask install java eclipse-java
 
 # Science, bitch
