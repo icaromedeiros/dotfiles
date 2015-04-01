@@ -20,8 +20,9 @@ brew install git wget
 # Python
 brew install python
 
-# Node
+# Javascript tools and Node
 brew install node
+brew install jq
 
 # Ruby
 brew install rbenv ruby-build
@@ -58,7 +59,15 @@ brew install caskroom/cask/brew-cask
 
 # Dev tools
 brew cask install atom macvim rstudio gitx iterm2 sequel-pro
+brew cask install virtualbox vagrant vagrant-manager
 brew cask install java eclipse-java
+
+# For compiling PIL
+brew install freetype
+
+# MongoDB
+brew install mongodb
+sudo mkdir -p /data/db
 
 # Science, bitch
 brew cask install mactex mendeley-desktop
