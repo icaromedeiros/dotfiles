@@ -1,5 +1,5 @@
 .PHONY: brew git zsh python vim osx jshint iterm r
-all: brew git zsh python vim osx jshint iterm r
+all: brew packages git zsh python vim osx jshint iterm r
 	@echo "Done."
 brew:
 	@sh brew/install.sh
