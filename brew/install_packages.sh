@@ -76,13 +76,13 @@ brew cask install mactex mendeley-desktop
 brew cask install firefox google-chrome
 
 # (Free)? entertainment
-brew cask install chromecast spotify subtitles vuze simple-comic
+brew cask install chromecast spotify subtitles vuze simple-comic vlc
 
 # Communication
 brew cask install adium slack skype
 
 # Other
-brew cask install android-file-transfer caffeine dropbox dropbox-encore evernote spectacle
+brew cask install android-file-transfer caffeine dropbox dropbox-encore evernote spectacle flux flycut
 
 ###
 # Cleanup
