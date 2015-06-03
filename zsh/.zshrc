@@ -101,6 +101,7 @@ export HOMEBREW_GITHUB_API_TOKEN=fbe5737441e5a138cc9f9e3d55d50bf52f3a9336
 # Disables r built-in command
 disable r
 export RSTUDIO_WHICH_R=/usr/local/bin/r
+alias rscript="Rscript"
 
 ## Virtuoso
 
@@ -112,8 +113,6 @@ alias virtuoso-start="cd $VIRTUOSO_HOME; virtuoso-t +foreground"
 alias mysql-start="mysql.server start"
 alias thumbor-start="thumbor -l info -k ~/workspace/app-semantica-sample/app-semantica-site/thumbor.key"
 alias solr-start="cd ~/workspace/solr-app-semantica; ./start-solr.sh"
-alias barramento-start="cd ~/workspace/barramento; make start"
-
 alias uatu-start="cd ~/workspace/uatu; make run"
 
 alias tsr="tsuru"
