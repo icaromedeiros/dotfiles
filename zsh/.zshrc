@@ -88,11 +88,6 @@ alias ..="cd .."
 alias mvim="nocorrect mvim"
 alias make="nocorrect make"
 
-## Avoiding "too many open files" error
-
-ulimit -n 65536
-ulimit -u 2048
-
 ## Brew
 
 export HOMEBREW_GITHUB_API_TOKEN=fbe5737441e5a138cc9f9e3d55d50bf52f3a9336
