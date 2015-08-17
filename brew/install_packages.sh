@@ -57,10 +57,12 @@ brew install pandoc
 ###
 brew install caskroom/cask/brew-cask
 
+brew tap caskroom/versions
+
 # Dev tools
 brew cask install atom macvim rstudio gitx iterm2 sequel-pro
 brew cask install virtualbox vagrant vagrant-manager
-brew cask install java eclipse-java
+brew cask install java eclipse-java java7
 
 # For compiling PIL
 brew install freetype
