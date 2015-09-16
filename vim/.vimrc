@@ -117,6 +117,10 @@ let g:syntastic_style_warning_symbol='⚠S'
 
 " vim-airline options
 let g:airline#extensions#tabline#enabled = 1
+" Show only filename, not full path
+let g:airline#extensions#tabline#fnamemod = ':p:t'
+" Do not show tab number
+let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts=1
 

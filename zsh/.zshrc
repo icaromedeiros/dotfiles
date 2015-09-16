@@ -40,10 +40,6 @@ plugins=(git brew pip python virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-export PATH="/Users/icaro.medeiros/.config/fish/bin:/Users/icaro.medeiros/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
-
 # You may need to manually set your language environment
 export LANG=pt_BR.UTF-8
 
@@ -72,6 +68,13 @@ export GIT_MERGE_AUTOEDIT=no
 ## Java
 
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+## Spark
+
+export SPARK_LOCAL_IP=localhost
+export PYSPARK_DRIVER_PYTHON=ipython
+export SPARK_HOME="/Users/icaro/workspace/spark-1.4.1-bin-hadoop2.6"
 
 ## Ruby
 
@@ -88,10 +91,6 @@ alias ..="cd .."
 alias mvim="nocorrect mvim"
 alias make="nocorrect make"
 
-## Brew
-
-export HOMEBREW_GITHUB_API_TOKEN=fbe5737441e5a138cc9f9e3d55d50bf52f3a9336
-
 ## R
 # Disables r built-in command
 disable r
@@ -102,12 +101,8 @@ alias rscript="Rscript"
 
 export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso616/6.1.6/var/lib/virtuoso/db"
 
-## Aliases
+# Load credential variables (github token, amazon keys, etc)
+source ~/Dropbox/credentials/credentials.sh
 
-alias virtuoso-start="cd $VIRTUOSO_HOME; virtuoso-t +foreground"
-alias mysql-start="mysql.server start"
-alias thumbor-start="thumbor -l info -k ~/workspace/app-semantica-sample/app-semantica-site/thumbor.key"
-alias solr-start="cd ~/workspace/solr-app-semantica; ./start-solr.sh"
-alias uatu-start="cd ~/workspace/uatu; make run"
 
-alias tsr="tsuru"
+export PATH="/Users/icaro.medeiros/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:$SPARK_HOME/bin"
