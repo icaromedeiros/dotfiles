@@ -8,13 +8,16 @@ Installing
 
 Just clone the repo and use make commands to install configurations.
 
+As git is installed with `make brew`,
+an alternative is to download `https://github.com/icaromedeiros/dotfiles/archive/master.zip`.
+
 For example, to install vim packages and configurations:
 
 ```
 make vim
 ```
 
-To install everything, use:
+To install everything, in the right order, use:
 
 ```
 make all
