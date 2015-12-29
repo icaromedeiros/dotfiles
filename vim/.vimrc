@@ -144,7 +144,7 @@ let g:jellybeans_overrides = {
 \}
 
 " The chosen one because it has italic, bold, etc
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h18
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h20
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
