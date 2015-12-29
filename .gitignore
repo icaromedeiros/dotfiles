@@ -4,3 +4,4 @@
 *.pyc
 vim/vim/*
 *.sess # debug sessions
+.DS_Store
