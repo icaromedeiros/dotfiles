@@ -3,6 +3,7 @@
 # make all excludes jshint and r (not used for now)
 all: osx brew packages git zsh python vim iterm
 	@echo "[dotfiles-make] ALL done."
+	@echo "Follow up: Read iterm/open_in_finder"
 osx:
 	@echo "[dotfiles-make] Updating OS X and installing Xcode ..."
 	@sh osx/preps.sh
