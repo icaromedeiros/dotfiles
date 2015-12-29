@@ -29,6 +29,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="dd/mm/yyyy"
 
+# Uses zsh history w/o the mindfuckness
+alias history="fc -il 1"
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -70,21 +73,30 @@ export GIT_MERGE_AUTOEDIT=no
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
-## Spark
+## Hadoop and Spark
+
+export HADOOP_HOME="/Users/icaro/workspace/hadoop-2.7.1"
+export SPARK_HOME="/Users/icaro/workspace/spark-1.5.0-bin-hadoop2.6"
+export HIVE_HOME="/Users/icaro/workspace/apache-hive-1.2.1-bin"
 
 export SPARK_LOCAL_IP=localhost
 export PYSPARK_DRIVER_PYTHON=ipython
-export SPARK_HOME="/Users/icaro/workspace/spark-1.4.1-bin-hadoop2.6"
+
+## Python / Anaconda
+
+export ANACONDA_HOME="/Users/icaro/anaconda2"
 
 ## Ruby
 
 eval "$(rbenv init -)"
+export RBENV_SHIMS="~/.rbenv/shims"
 
 ## Common shortcuts
 
 alias ls="ls -G"
 alias ll="ls -ltrGah"
 alias ..="cd .."
+alias grp="grep -rins -C 3"
 
 ## Do not correct
 
@@ -104,5 +116,12 @@ export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso616/6.1.6/var/lib/virtuoso/db"
 # Load credential variables (github token, amazon keys, etc)
 source ~/Dropbox/credentials/credentials.sh
 
+## Latex
+export LATEX_BIN_PATH="/usr/local/texlive/2015/bin/x86_64-darwin"
 
-export PATH="/Users/icaro.medeiros/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:$SPARK_HOME/bin"
+# Avoids Pelican locale errors
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export PATH="$RBENV_SHIMS:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:$SPARK_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$LATEX_BIN_PATH:$ANACONDA_HOME/bin:$PATH"
