@@ -39,7 +39,8 @@ alias history="fc -il 1"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew pip python virtualenvwrapper)
+plugins=(git brew brew-cask pip python virtualenvwrapper sudo web-search)
+# Excluded but probably useful: docker
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,11 +87,6 @@ export PYSPARK_DRIVER_PYTHON=ipython
 
 export ANACONDA_HOME="/Users/icaro/anaconda2"
 
-## Ruby
-
-eval "$(rbenv init -)"
-export RBENV_SHIMS="~/.rbenv/shims"
-
 ## Common shortcuts
 
 alias ls="ls -G"
@@ -124,4 +120,4 @@ export LATEX_BIN_PATH="/usr/local/texlive/2015/bin/x86_64-darwin"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="$RBENV_SHIMS:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:$SPARK_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$LATEX_BIN_PATH:$ANACONDA_HOME/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:$SPARK_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$LATEX_BIN_PATH:$ANACONDA_HOME/bin:$PATH"
