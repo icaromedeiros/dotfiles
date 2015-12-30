@@ -5,20 +5,31 @@
 # Ask for the administrator password upfront.
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Make sure we’re using the latest Homebrew.
-echo "Updating brew..."
-brew update
-
 echo "Installing brew packages..."
+
+# Install GNU core utilities (those that come with OS X are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew install coreutils
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install gnu-sed --with-default-names
+
+# Install more recent versions of some OS X tools.
+brew install vim --override-system-vi
+brew install homebrew/dupes/grep
+brew install homebrew/dupes/openssh
 
 # Essentials
 brew install git wget
 
 # Python
 brew install python
+brew install python3
 
 # Javascript tools and Node
 brew install node
@@ -27,27 +38,19 @@ brew install jq
 # Ruby
 brew install rbenv ruby-build
 
-# Databases
-brew install https://raw.githubusercontent.com/icaromedeiros/homebrew-versions/master/virtuoso616.rb
-brew install redis
-
-# Java tools
-brew install activemq
-brew install gradle
-
-# Tsuru
-brew tap tsuru/homebrew-tsuru
-brew install tsuru tsuru-admin crane
-
-# Java/Scala
+# Java
 brew install maven
 brew install scala sbt
-brew install hadoop apache-spark kafka typesafe-activator
+brew install hadoop apache-spark
+
+# Tsuru
+#brew tap tsuru/homebrew-tsuru
+#brew install tsuru tsuru-admin crane
 
 # R
-brew tap homebrew/science
-brew install Caskroom/cask/xquartz
-brew install r
+#brew tap homebrew/science
+#brew install Caskroom/cask/xquartz
+#brew install r
 
 # Other
 brew install pandoc
@@ -60,31 +63,36 @@ brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
 # Dev tools
-brew cask install atom macvim rstudio gitx iterm2 sequel-pro
-brew cask install virtualbox vagrant vagrant-manager
-brew cask install java eclipse-java java7
-
-# For compiling PIL
-brew install freetype
-
-# MongoDB
-brew install mongodb
-sudo mkdir -p /data/db
+brew cask install --appdir="/Applications" atom macvim gitx iterm2
+brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" java eclipse-java java7
 
 # Science, bitch
-brew cask install mactex mendeley-desktop
+brew cask install --appdir="/Applications" mactex mendeley-desktop
 
 # Browsers
-brew cask install firefox google-chrome
+brew cask install --appdir="/Applications" firefox google-chrome
 
 # (Free)? entertainment
-brew cask install chromecast spotify subtitles vuze simple-comic vlc
+brew cask install --appdir="/Applications" chromecast spotify subtitles vuze simple-comic vlc
 
 # Communication
-brew cask install adium slack skype
+brew cask install --appdir="/Applications" adium slack skype
 
 # Other
-brew cask install android-file-transfer caffeine dropbox dropbox-encore evernote spectacle flux flycut
+brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox dropbox-encore evernote spectacle flux flycut
+
+###
+# Packages depending on casks
+###
+
+# Install Docker, which requires virtualbox
+brew install docker
+brew install docker-machine
+
+# Install developer friendly quick look plugins;
+#  see https://github.com/sindresorhus/quick-look-plugins
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
 ###
 # Cleanup
