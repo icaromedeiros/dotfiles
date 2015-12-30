@@ -41,7 +41,7 @@ brew install rbenv ruby-build
 # Java
 brew install maven
 brew install scala sbt
-brew install hadoop apache-spark
+brew install hadoop apache-spark hive
 
 # Tsuru
 #brew tap tsuru/homebrew-tsuru
