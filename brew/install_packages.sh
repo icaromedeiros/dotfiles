@@ -38,11 +38,6 @@ brew install jq
 # Ruby
 brew install rbenv ruby-build
 
-# Java
-brew install maven
-brew install scala sbt
-brew install hadoop apache-spark hive
-
 # Tsuru
 #brew tap tsuru/homebrew-tsuru
 #brew install tsuru tsuru-admin crane
@@ -61,11 +56,13 @@ brew install pandoc
 brew install caskroom/cask/brew-cask
 
 brew tap caskroom/versions
+brew tap caskroom/fonts
 
 # Dev tools
 brew cask install --appdir="/Applications" atom macvim gitx iterm2
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" java eclipse-java java7
+brew cask install font-dejavu-sans-mono-for-powerline
 
 # Science, bitch
 brew cask install --appdir="/Applications" mactex mendeley-desktop
@@ -74,13 +71,17 @@ brew cask install --appdir="/Applications" mactex mendeley-desktop
 brew cask install --appdir="/Applications" firefox google-chrome
 
 # (Free)? entertainment
-brew cask install --appdir="/Applications" chromecast spotify subtitles vuze simple-comic vlc
+brew cask install --appdir="/Applications" spotify vuze techstoreclub-simple-comic vlc
 
 # Communication
 brew cask install --appdir="/Applications" adium slack skype
 
 # Other
 brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox dropbox-encore evernote spectacle flux flycut
+
+# Install developer friendly quick look plugins;
+#  see https://github.com/sindresorhus/quick-look-plugins
+brew cask install --appdir="/Applications" qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
 ###
 # Packages depending on casks
@@ -90,9 +91,11 @@ brew cask install --appdir="/Applications" android-file-transfer caffeine dropbo
 brew install docker
 brew install docker-machine
 
-# Install developer friendly quick look plugins;
-#  see https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+# Java libs (Java casks required)
+brew install maven
+brew install scala sbt
+brew install hadoop apache-spark hive
+
 
 ###
 # Cleanup

@@ -120,4 +120,4 @@ export LATEX_BIN_PATH="/usr/local/texlive/2015/bin/x86_64-darwin"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:$SPARK_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$LATEX_BIN_PATH:$ANACONDA_HOME/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:$SPARK_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$LATEX_BIN_PATH:$ANACONDA_HOME/bin:$PATH"
