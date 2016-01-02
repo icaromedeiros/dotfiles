@@ -39,6 +39,9 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
+# Disable sound effects
+defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
+
 ###
 # Finder
 ###
