@@ -77,7 +77,7 @@ brew cask install --appdir="/Applications" spotify vuze techstoreclub-simple-com
 brew cask install --appdir="/Applications" adium slack skype
 
 # Other
-brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox dropbox-encore evernote spectacle flux flycut
+brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox dropbox-encore evernote spectacle flux flycut unrarx
 
 # Install developer friendly quick look plugins;
 #  see https://github.com/sindresorhus/quick-look-plugins

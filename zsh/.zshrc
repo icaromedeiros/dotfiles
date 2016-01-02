@@ -89,7 +89,6 @@ export ANACONDA_HOME="/Users/icaro/anaconda2"
 
 ## Common shortcuts
 
-alias ls="ls -G"
 alias ll="ls -ltrGah"
 alias ..="cd .."
 alias grp="grep -rins -C 3"
