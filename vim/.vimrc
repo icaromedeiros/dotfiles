@@ -34,23 +34,15 @@ NeoBundle 'Lokaltog/powerline-fonts'
 " syntax awesomeness 4all
 NeoBundle 'scrooloose/syntastic'
 " color schemes
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'vim-scripts/molokai'
 NeoBundle 'nanotech/jellybeans.vim'
 " Python autocompletion
 NeoBundle 'davidhalter/jedi-vim'
 " PEP8 and python-flakes checker
 NeoBundle 'nvie/vim-flake8'
-" n3 syntax highlighting
-NeoBundle 'vim-scripts/n3.vim'
-" Scope coloring JS
-NeoBundle 'bigfish/vim-js-context-coloring'
 " Completion in insert mode, just using tab
 NeoBundle 'ervandew/supertab'
 " Scala highlighting
 NeoBundle 'derekwyatt/vim-scala'
-" Puppet
-NeoBundle 'rodjek/vim-puppet'
 
 
 " Required:
@@ -106,11 +98,6 @@ let g:syntastic_tex_checkers = ['chktex', 'atdtool']
 let g:syntastic_tex_chktex_post_args='-n1 -n2 -n11'
 
 let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=1
-let g:syntastic_error_symbol='✗✗'
-let g:syntastic_style_error_symbol='✗S'
-let g:syntastic_warning_symbol='⚠⚠'
-let g:syntastic_style_warning_symbol='⚠S'
 
 " To debug syntastic
 "let g:syntastic_debug = 3
@@ -179,12 +166,6 @@ let g:flake8_ignore="E501,W293"
 let g:pyflakes_use_quickfix = 0
 
 """"""""""
-"" vim-js-context-coloring
-""""""""""
-
-let g:js_context_colors_enabled = 0
-
-""""""""""
 "" search
 """"""""""
 
@@ -233,11 +214,6 @@ function! TrimWhiteSpace()
 :endfunction
 map <leader>w :call TrimWhiteSpace()<CR>
 
-" RDF Notation 3 Syntax
-augroup filetypedetect
-au BufNewFile,BufRead *.n3  setfiletype n3
-au BufNewFile,BufRead *.ttl  setfiletype n3
-augroup END
 
 """"""""""""""""""""""""""""""""""
 "" LIST OF SHORTCUTS AND MNEMONICS
