@@ -42,6 +42,12 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.
 # Disable sound effects
 defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
 
+# Expanded save & print dialogs
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
 ###
 # Finder
 ###
@@ -98,6 +104,9 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Disable auto-correct
+defaults write NSGlobalDomain WebAutomaticSpellingCorrectionEnabled -bool false
 
 
 ###
