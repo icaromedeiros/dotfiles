@@ -69,16 +69,15 @@ alias GS="gs" # fuck off, ghost script
 alias "gsub"="git submodule update"
 export GIT_MERGE_AUTOEDIT=no
 
-## Java
+## Java, Hadoop and Spark
 
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+# export commands from "caveats" session at brew install output
 
-## Hadoop and Spark
+export JAVA_HOME="$(/usr/libexec/java_home)"
 
-export HADOOP_HOME="/Users/icaro/workspace/hadoop-2.7.1"
-export SPARK_HOME="/Users/icaro/workspace/spark-1.5.0-bin-hadoop2.6"
-export HIVE_HOME="/Users/icaro/workspace/apache-hive-1.2.1-bin"
+export HADOOP_HOME="/usr/local/Cellar/hadoop/2.7.1/libexec"
+export SPARK_HOME="/usr/local/Cellar/apache-spark/1.5.2/libexec"
+export HIVE_HOME="/usr/local/Cellar/hive/1.2.1/libexec"
 
 export SPARK_LOCAL_IP=localhost
 export PYSPARK_DRIVER_PYTHON=ipython
@@ -104,10 +103,6 @@ alias make="nocorrect make"
 disable r
 export RSTUDIO_WHICH_R=/usr/local/bin/r
 alias rscript="Rscript"
-
-## Virtuoso
-
-export VIRTUOSO_HOME="/usr/local/Cellar/virtuoso616/6.1.6/var/lib/virtuoso/db"
 
 # Load credential variables (github token, amazon keys, etc)
 source ~/Dropbox/credentials/credentials.sh
