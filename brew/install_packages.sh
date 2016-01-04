@@ -38,6 +38,13 @@ brew install jq
 # Ruby
 brew install rbenv ruby-build
 
+# SSH
+
+# Tunnel SSH through HTTP proxies (for ssh/git behind corporate proxy)
+brew install corkscrew
+# Copy id (avoids entering passwd every time)
+brew install ssh-copy-id
+
 # Tsuru
 #brew tap tsuru/homebrew-tsuru
 #brew install tsuru tsuru-admin crane
