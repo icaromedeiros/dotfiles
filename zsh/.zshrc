@@ -84,7 +84,10 @@ export PYSPARK_DRIVER_PYTHON=ipython
 
 ## Python / Anaconda
 
-export ANACONDA_HOME="/Users/icaro/anaconda2"
+export ANACONDA_HOME="~/anaconda2"
+
+alias ptipython="ptipython --vi"
+alias ptpython="ptipython"
 
 ## Common shortcuts
 
