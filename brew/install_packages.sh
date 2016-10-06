@@ -81,7 +81,7 @@ brew cask install --appdir="/Applications" firefox google-chrome
 brew cask install --appdir="/Applications" spotify vuze techstoreclub-simple-comic vlc
 
 # Communication
-brew cask install --appdir="/Applications" adium slack skype
+brew cask install --appdir="/Applications" slack skype
 
 # Other
 brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox dropbox-encore evernote spectacle flux flycut unrarx
@@ -100,7 +100,7 @@ brew install docker-machine
 
 # Java libs (Java casks required)
 brew install maven
-brew install scala sbt
+brew install scala sbt gradle
 brew install hadoop apache-spark hive
 
 

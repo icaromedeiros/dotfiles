@@ -32,6 +32,10 @@ HIST_STAMPS="dd/mm/yyyy"
 # Uses zsh history w/o the mindfuckness
 alias history="fc -il 1"
 
+# Uses zmv to enable intelligent renaming such as mmv *.txt *.md
+autoload -U zmv
+alias mmv='noglob zmv -W'
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -76,7 +80,7 @@ export GIT_MERGE_AUTOEDIT=no
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
 export HADOOP_HOME="/usr/local/Cellar/hadoop/2.7.1/libexec"
-export SPARK_HOME="/usr/local/Cellar/apache-spark/1.5.2/libexec"
+export SPARK_HOME="/usr/local/Cellar/apache-spark/1.6.0/libexec"
 export HIVE_HOME="/usr/local/Cellar/hive/1.2.1/libexec"
 
 export SPARK_LOCAL_IP=localhost
@@ -84,7 +88,7 @@ export PYSPARK_DRIVER_PYTHON=ipython
 
 ## Python / Anaconda
 
-export ANACONDA_HOME="~/anaconda2"
+export ANACONDA_HOME="~/anaconda3"
 
 alias ptipython="ptipython --vi"
 alias ptpython="ptipython"
@@ -95,6 +99,7 @@ alias ls="ls --color=tty"
 alias ll="ls -ltrGah"
 alias ..="cd .."
 alias grp="grep -rins -C 3"
+alias cp="cp -rvf"
 
 ## Do not correct
 
