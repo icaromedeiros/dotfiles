@@ -13,9 +13,12 @@ osx:
 brew:
 	@echo "[dotfiles-make] Installing brew ..."
 	@sh brew/install.sh
-packages:
+packages_home:
 	@echo "[dotfiles-make] Installing brew packages ..."
-	@sh brew/install_packages.sh
+	@sh brew/install_packages_home.sh
+packages_work:
+		@echo "[dotfiles-make] Installing brew packages ..."
+		@sh brew/install_packages_work.sh
 git:
 	@echo "[dotfiles-make] Installing git configs ..."
 	@sh git/configs.sh

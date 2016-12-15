@@ -2,9 +2,6 @@
 
 # Inspired in https://github.com/mathiasbynens/dotfiles/blob/master/brew.sh
 
-# Ask for the administrator password upfront.
-sudo -v
-
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
@@ -45,23 +42,14 @@ brew install corkscrew
 # Copy id (avoids entering passwd every time)
 brew install ssh-copy-id
 
-# Tsuru
-#brew tap tsuru/homebrew-tsuru
-#brew install tsuru tsuru-admin crane
-
-# R
-#brew tap homebrew/science
-#brew install Caskroom/cask/xquartz
-#brew install r
-
 # Other
 brew install pandoc
 
 ###
 # Casks
 ###
-brew install caskroom/cask/brew-cask
 
+brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap caskroom/fonts
 
@@ -71,9 +59,6 @@ brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" java eclipse-java java7
 brew cask install font-dejavu-sans-mono-for-powerline
 
-# Science, bitch
-brew cask install --appdir="/Applications" mactex mendeley-desktop
-
 # Browsers
 brew cask install --appdir="/Applications" firefox google-chrome
 
@@ -81,10 +66,10 @@ brew cask install --appdir="/Applications" firefox google-chrome
 brew cask install --appdir="/Applications" spotify vuze techstoreclub-simple-comic vlc
 
 # Communication
-brew cask install --appdir="/Applications" slack skype
+brew cask install --appdir="/Applications" slack skype telegram
 
 # Other
-brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox dropbox-encore evernote spectacle flux flycut unrarx
+brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox evernote spectacle flux flycut unrarx
 
 # Install developer friendly quick look plugins;
 #  see https://github.com/sindresorhus/quick-look-plugins
