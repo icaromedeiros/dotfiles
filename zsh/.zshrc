@@ -79,19 +79,12 @@ export GIT_MERGE_AUTOEDIT=no
 
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
-export HADOOP_HOME="/usr/local/Cellar/hadoop/2.7.1/libexec"
-export SPARK_HOME="/usr/local/Cellar/apache-spark/1.6.0/libexec"
-export HIVE_HOME="/usr/local/Cellar/hive/1.2.1/libexec"
+export HADOOP_HOME="/usr/local/Cellar/hadoop/2.7.3/libexec"
+export SPARK_HOME="/usr/local/Cellar/apache-spark/2.0.2/libexec"
+export HIVE_HOME="/usr/local/Cellar/hive/2.1.0/libexec"
 
 export SPARK_LOCAL_IP=localhost
 export PYSPARK_DRIVER_PYTHON=ipython
-
-## Python / Anaconda
-
-export ANACONDA_HOME="~/anaconda3"
-
-alias ptipython="ptipython --vi"
-alias ptpython="ptipython"
 
 ## Common shortcuts
 
@@ -108,19 +101,16 @@ alias make="nocorrect make"
 
 ## R
 # Disables r built-in command
-disable r
-export RSTUDIO_WHICH_R=/usr/local/bin/r
-alias rscript="Rscript"
+#disable r
+#export RSTUDIO_WHICH_R=/usr/local/bin/r
+#alias rscript="Rscript"
 
-# Load credential variables (github token, amazon keys, etc)
+# Load credentials
 source ~/Dropbox/credentials/credentials.sh
-
-## Latex
-export LATEX_BIN_PATH="/usr/local/texlive/2015/bin/x86_64-darwin"
 
 # Avoids Pelican locale errors
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:$SPARK_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$LATEX_BIN_PATH:$ANACONDA_HOME/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:$SPARK_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$PATH"

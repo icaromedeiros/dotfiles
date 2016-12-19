@@ -23,9 +23,9 @@ pip install scipy
 pip install matplotlib
 pip install pandas
 pip install seaborn
+pip install scipy
 pip install scikit-learn
-pip install "ipython[all]"
-pip install pandas
+pip install jupyter
 pip install py4j # for pyspark
 
 echo "Done."
