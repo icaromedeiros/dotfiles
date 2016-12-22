@@ -43,7 +43,7 @@ alias mmv='noglob zmv -W'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew cask pip python virtualenvwrapper sudo web-search)
+plugins=(git brew brew-cask pip python virtualenvwrapper sudo web-search)
 # Excluded but probably useful: docker
 
 source $ZSH/oh-my-zsh.sh
