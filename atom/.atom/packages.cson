@@ -11,7 +11,6 @@ packages: [
   "markdown-assistant"
   "markdown-writer"
   "package-sync"
-  "sync-settings"
   "vim-mode"
   "vim-mode-visual-block"
   "vim-surround"

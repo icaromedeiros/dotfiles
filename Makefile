@@ -1,4 +1,4 @@
-.PHONY: brew git zsh python vim osx jshint iterm r
+.PHONY: brew git zsh python vim atom osx jshint iterm r
 
 # make all excludes jshint and r (not used for now)
 all: osx brew packages git zsh python vim iterm
@@ -31,6 +31,9 @@ python:
 vim:
 	@echo "[dotfiles-make] Installing vim and .vimrc ..."
 	@sh vim/install.sh
+atom:
+	@echo "[dotfiles-make] Installing .atom configs ..."
+	@sh atom/install.sh
 iterm:
 	@echo "[dotfiles-make] Installing iTerm configs ..."
 	@sh iterm/configs.sh
