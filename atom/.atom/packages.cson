@@ -9,7 +9,6 @@ packages: [
   "lint"
   "linter"
   "linter-pep8"
-  "markdown-assistant"
   "markdown-writer"
   "package-sync"
   "vim-mode"

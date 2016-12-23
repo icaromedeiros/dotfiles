@@ -20,6 +20,8 @@
   "exception-reporting":
     userId: "1eb8bed9-5fb1-b88f-81c5-d36c841b5fc4"
   linter: {}
+  "markdown-assistant":
+    disableImageUploaderIfNotMarkdown: true
   "one-dark-ui":
     fontSize: 18
   "package-sync":
