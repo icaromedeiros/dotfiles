@@ -9,6 +9,10 @@
       indent_size: 2
   core:
     telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "better-jellybeans-syntax"
+    ]
   editor:
     fontFamily: "DejaVu Sans Mono for Powerline"
     fontSize: 19
@@ -17,7 +21,7 @@
     userId: "1eb8bed9-5fb1-b88f-81c5-d36c841b5fc4"
   linter: {}
   "one-dark-ui":
-    fontSize: 16
+    fontSize: 18
   "package-sync":
     createOnChange: true
     forceOverwrite: true
@@ -37,5 +41,7 @@
       "pt-BR"
       "en-US"
     ]
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false

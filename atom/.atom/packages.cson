@@ -1,6 +1,7 @@
 packages: [
   "atom-beautify"
   "autocomplete-bibtex"
+  "better-jellybeans-syntax"
   "data-atom"
   "format-sql"
   "Hive"
