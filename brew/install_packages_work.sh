@@ -54,29 +54,29 @@ brew tap caskroom/versions
 brew tap caskroom/fonts
 
 # Dev tools
-brew cask install --appdir="/Applications" atom macvim gitx iterm2
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" docker
-brew cask install --appdir="/Applications" java eclipse-java java7
-brew cask install --appdir="/Applications" mactex
+brew cask install atom macvim gitx iterm2
+brew cask install virtualbox
+brew cask install docker
+brew cask install java eclipse-java java7
+brew cask install mactex
 brew cask install font-dejavu-sans-mono-for-powerline
 
 
 # Browsers
-brew cask install --appdir="/Applications" firefox google-chrome
+brew cask install firefox google-chrome
 
 # Entertainment
-brew cask install --appdir="/Applications" spotify
+brew cask install spotify
 
 # Communication
-brew cask install --appdir="/Applications" slack skype telegram
+brew cask install slack skype telegram
 
 # Other
-brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox evernote spectacle flux flycut unrarx
+brew cask install android-file-transfer caffeine dropbox evernote spectacle flux flycut unrarx
 
 # Install developer friendly quick look plugins;
 #  see https://github.com/sindresorhus/quick-look-plugins
-brew cask install --appdir="/Applications" qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
 ###
 # Packages depending on casks
