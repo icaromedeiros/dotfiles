@@ -56,6 +56,7 @@ brew tap caskroom/fonts
 # Dev tools
 brew cask install --appdir="/Applications" atom macvim gitx iterm2
 brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" java eclipse-java java7
 brew cask install font-dejavu-sans-mono-for-powerline
 
@@ -78,10 +79,6 @@ brew cask install --appdir="/Applications" qlcolorcode qlstephen qlmarkdown quic
 ###
 # Packages depending on casks
 ###
-
-# Install Docker, which requires virtualbox
-brew install docker
-brew install docker-machine
 
 # Java libs (Java casks required)
 brew install maven

@@ -8,6 +8,9 @@
     sql:
       indent_size: 2
   core:
+    disabledPackages: [
+      "linter-pep8"
+    ]
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
