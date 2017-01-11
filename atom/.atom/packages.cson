@@ -5,6 +5,7 @@ packages: [
   "data-atom"
   "format-sql"
   "Hive"
+  "language-docker"
   "language-pfm"
   "lint"
   "linter"
