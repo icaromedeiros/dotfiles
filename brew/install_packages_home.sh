@@ -15,6 +15,8 @@ brew install coreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
+# Install GNU `make`, overwriting the built-in `make`.
+brew install homebrew/dupes/make --with-default-namesz
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi

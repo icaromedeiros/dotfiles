@@ -98,6 +98,7 @@ pyspark --queue datalabs --num-executors 4 --executor-memory 2g --executor-cores
 
 alias ls="ls --color=tty"
 alias ll="ls -ltrGah"
+alias LS="ll" # Fuck Caps Lock
 alias ..="cd .."
 alias grp="grep -rins -C 3"
 alias cp="cp -rvf"
@@ -105,7 +106,6 @@ alias cp="cp -rvf"
 ## Do not correct
 
 alias mvim="nocorrect mvim"
-alias make="nocorrect make"
 
 ## R
 # Disables r built-in command
