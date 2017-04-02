@@ -33,6 +33,9 @@
       "text.markdown"
       "source.markdown"
     ]
+    knownWords: [
+      "portuguese"
+    ]
     locales: [
       "pt-BR"
       "en-US"
