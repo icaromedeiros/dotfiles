@@ -15,6 +15,8 @@ brew install coreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
+# Install GNU `make`, overwriting the built-in `make`.
+brew install homebrew/dupes/make --with-default-namesz
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
@@ -56,6 +58,7 @@ brew tap caskroom/fonts
 # Dev tools
 brew cask install atom macvim gitx iterm2
 brew cask install virtualbox
+(??)
 brew cask install java eclipse-java java7
 brew cask install font-dejavu-sans-mono-for-powerline
 
@@ -69,7 +72,7 @@ brew cask install spotify vuze techstoreclub-simple-comic vlc
 brew cask install slack skype telegram
 
 # Other
-brew cask install android-file-transfer caffeine insomniax dropbox evernote spectacle flux flycut unrarx
+(??)brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox evernote spectacle flux flycut unrarx
 
 # Install developer friendly quick look plugins;
 #  see https://github.com/sindresorhus/quick-look-plugins
@@ -78,10 +81,6 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 ###
 # Packages depending on casks
 ###
-
-# Install Docker, which requires virtualbox
-brew install docker
-brew install docker-machine
 
 # Java libs (Java casks required)
 brew install maven

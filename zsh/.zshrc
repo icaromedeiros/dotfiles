@@ -73,6 +73,10 @@ alias GS="gs" # fuck off, ghost script
 alias "gsub"="git submodule update"
 export GIT_MERGE_AUTOEDIT=no
 
+## Data science tools
+
+alias jup='jupyter notebook'
+
 ## Java, Hadoop and Spark
 
 # export commands from "caveats" session at brew install output
@@ -80,16 +84,21 @@ export GIT_MERGE_AUTOEDIT=no
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
 export HADOOP_HOME="/usr/local/Cellar/hadoop/2.7.3/libexec"
-export SPARK_HOME="/usr/local/Cellar/apache-spark/2.0.2/libexec"
+export SPARK_HOME="/usr/local/Cellar/apache-spark@1.6/1.6.3/libexec"
 export HIVE_HOME="/usr/local/Cellar/hive/2.1.0/libexec"
 
 export SPARK_LOCAL_IP=localhost
 export PYSPARK_DRIVER_PYTHON=ipython
 
+alias pyspark_notebook="IPYTHON_OPTS='notebook --ip 0.0.0.0 --no-browser' \
+pyspark --queue datalabs --num-executors 4 --executor-memory 2g --executor-cores 2 \
+ --conf 'spark.driver.maxResultSize=2g' --conf 'spark.driver.memory=2g'"
+
 ## Common shortcuts
 
 alias ls="ls --color=tty"
 alias ll="ls -ltrGah"
+alias LS="ll" # Fuck Caps Lock
 alias ..="cd .."
 alias grp="grep -rins -C 3"
 alias cp="cp -rvf"
@@ -97,7 +106,6 @@ alias cp="cp -rvf"
 ## Do not correct
 
 alias mvim="nocorrect mvim"
-alias make="nocorrect make"
 
 ## R
 # Disables r built-in command
