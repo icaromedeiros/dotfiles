@@ -1,13 +1,13 @@
 .PHONY: brew git zsh python vim atom osx jshint iterm r
 
 # make all excludes jshint and r (not used for now)
-all: osx brew packages git zsh python vim iterm
+all: osx brew packages_home git zsh python vim iterm
 	@echo "[dotfiles-make] ALL done."
 	@echo "Follow up: Read iterm/open_in_finder"
 	@echo "Note that some of these changes require a logout/restart of your OS to take effect"
 osx:
 	@echo "[dotfiles-make] Updating OS X and installing Xcode ..."
-	@sh osx/preps.sh
+	#@sh osx/preps.sh
 	@echo "[dotfiles-make] Applying OS X defaults ..."
 	@sh osx/defaults.sh
 brew:

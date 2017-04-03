@@ -1,14 +1,15 @@
-Introduction
-------------
+# Introduction
 
 My dot files, including configurations for vim, git, zsh, iTerm, and OS X.
 
-Installing
-----------
+**Warning**: Almost never works on the first time because of XCode BS,
+circular dependencies here and there and so on.
+
+# Installing
 
 Just clone the repo and use make commands to install configurations.
 
-As git is installed with `make brew`,
+As git is installed with `make brew` (or you can install XCode first),
 an alternative is to download `https://github.com/icaromedeiros/dotfiles/archive/master.zip`.
 
 For example, to install vim packages and configurations:
