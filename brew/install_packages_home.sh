@@ -58,7 +58,7 @@ brew tap caskroom/fonts
 # Dev tools
 brew cask install atom macvim gitx iterm2
 brew cask install virtualbox
-brew cask install docker
+(??)
 brew cask install java eclipse-java java7
 brew cask install font-dejavu-sans-mono-for-powerline
 
@@ -72,7 +72,7 @@ brew cask install spotify vuze techstoreclub-simple-comic vlc
 brew cask install slack skype telegram
 
 # Other
-brew cask install android-file-transfer caffeine dropbox evernote spectacle flux flycut unrarx
+(??)brew cask install --appdir="/Applications" android-file-transfer caffeine dropbox evernote spectacle flux flycut unrarx
 
 # Install developer friendly quick look plugins;
 #  see https://github.com/sindresorhus/quick-look-plugins

@@ -58,9 +58,9 @@ brew tap caskroom/fonts
 # Dev tools
 brew cask install atom macvim gitx iterm2
 brew cask install virtualbox
-brew cask install docker
+(??)
 brew cask install java eclipse-java java7
-brew cask install mactex
+(??)
 brew cask install font-dejavu-sans-mono-for-powerline
 
 
