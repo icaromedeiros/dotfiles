@@ -5,3 +5,6 @@
 vim/vim/*
 *.sess # debug sessions
 .DS_Store
+
+# wtf atom ?
+atom/.atom/github.cson
