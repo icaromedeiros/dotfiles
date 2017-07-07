@@ -13,7 +13,7 @@ jupyter-core==4.3.0
 
 # Extensions
 
-jupyter nbextension enable --py --sys-prefix widgetsnbextension
+jupyter nbextension enable --py --sys-prefix widgetsnbextension 
 
 ```
 def log_progress(sequence, every=None, size=None, name='Items'):
