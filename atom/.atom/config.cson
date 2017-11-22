@@ -7,9 +7,12 @@
       _analyticsUserId: "83d031fe-a21d-4d7b-a1b1-53ce22f6e2e8"
     sql:
       indent_size: 2
+  "autocomplete-python":
+    useKite: false
   core:
     disabledPackages: [
       "linter-pep8"
+      "vim-mode"
     ]
     telemetryConsent: "no"
     themes: [
@@ -18,11 +21,16 @@
     ]
   editor:
     fontFamily: "DejaVu Sans Mono for Powerline"
-    fontSize: 19
+    fontSize: 17
     invisibles: {}
+    preferredLineLength: 100
   "exception-reporting":
     userId: "1eb8bed9-5fb1-b88f-81c5-d36c841b5fc4"
   linter: {}
+  "linter-pycodestyle":
+    ignoreErrorCodes: [
+      "E501"
+    ]
   "markdown-assistant":
     disableImageUploaderIfNotMarkdown: true
   "one-dark-ui":
@@ -49,7 +57,6 @@
       "pt-BR"
       "en-US"
     ]
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
