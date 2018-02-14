@@ -14,12 +14,12 @@ an alternative is to download `https://github.com/icaromedeiros/dotfiles/archive
 
 For example, to install vim packages and configurations:
 
-```
+```sh
 make vim
 ```
 
 To install everything, in the right order, use:
 
-```
+```sh
 make all
 ```

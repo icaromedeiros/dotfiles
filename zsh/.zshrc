@@ -43,7 +43,8 @@ alias mmv='noglob zmv -W'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew brew-cask pip python virtualenvwrapper sudo web-search)
+plugins=(git brew brew-cask sudo web-search)
+#plugins=(git brew brew-cask pip python virtualenvwrapper sudo web-search)
 # Excluded but probably useful: docker
 
 source $ZSH/oh-my-zsh.sh
@@ -51,12 +52,8 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=pt_BR.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+# Preferred editor
+export EDITOR='vim'
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -77,22 +74,26 @@ export GIT_MERGE_AUTOEDIT=no
 
 alias jup='jupyter notebook'
 
+## Python
+
+export PYTHON_HOME="/usr/local/opt/python/libexec/bin/python"
+export VIRTUALENVWRAPPER_PYTHON=${PYTHON_HOME}
+export VIRTUALENVWRAPPER_VIRTUALENV="/usr/local/bin/virtualenv"
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Aura
+
+export AURA_HOME="/Users/icaro/workspace/aura"
+export AURA_CODE_PATH="${AURA_HOME}/src/python"
+
 ## Java, Hadoop and Spark
 
-# export commands from "caveats" session at brew install output
-
 export JAVA_HOME="$(/usr/libexec/java_home)"
+export HADOOP_HOME="${AURA_HOME}/src/hadoop/hadoop-2.7.3"
 
-export HADOOP_HOME="/usr/local/Cellar/hadoop/2.7.3/libexec"
-export SPARK_HOME="/usr/local/Cellar/apache-spark@1.6/1.6.3/libexec"
-export HIVE_HOME="/usr/local/Cellar/hive/2.1.0/libexec"
-
+export SPARK_HOME="${AURA_HOME}/src/spark/spark-2.1.1-bin-hadoop2.7"
 export SPARK_LOCAL_IP=localhost
 export PYSPARK_DRIVER_PYTHON=ipython
-
-alias pyspark_notebook="IPYTHON_OPTS='notebook --ip 0.0.0.0 --no-browser' \
-pyspark --queue datalabs --num-executors 4 --executor-memory 2g --executor-cores 2 \
- --conf 'spark.driver.maxResultSize=2g' --conf 'spark.driver.memory=2g'"
 
 ## Common shortcuts
 
@@ -121,4 +122,5 @@ source ~/Dropbox/credentials/credentials.sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:$SPARK_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$PATH"
+# Python home first to override /usr/local/bin python
+export PATH="$PYTHON_HOME/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:$SPARK_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$PATH"
