@@ -74,30 +74,8 @@ export GIT_MERGE_AUTOEDIT=no
 
 alias jup='jupyter notebook'
 
-## Python
-
-export PYTHON_HOME="/usr/local/opt/python/libexec/bin/python"
-export VIRTUALENVWRAPPER_PYTHON=${PYTHON_HOME}
-export VIRTUALENVWRAPPER_VIRTUALENV="/usr/local/bin/virtualenv"
-source /usr/local/bin/virtualenvwrapper.sh
-
-# Aura
-
-export AURA_HOME="/Users/icaro/workspace/aura"
-export AURA_CODE_PATH="${AURA_HOME}/src/python"
-
-## Java, Hadoop and Spark
-
-export JAVA_HOME="$(/usr/libexec/java_home)"
-export HADOOP_HOME="${AURA_HOME}/src/hadoop/hadoop-2.7.3"
-
-export SPARK_HOME="${AURA_HOME}/src/spark/spark-2.1.1-bin-hadoop2.7"
-export SPARK_LOCAL_IP=localhost
-export PYSPARK_DRIVER_PYTHON=ipython
-
 ## Common shortcuts
 
-alias ls="ls --color=tty"
 alias ll="ls -ltrGah"
 alias LS="ll" # Fuck Caps Lock
 alias ..="cd .."

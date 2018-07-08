@@ -2,12 +2,9 @@
 
 # Inspired in https://github.com/mathiasbynens/dotfiles/blob/master/brew.sh
 
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 echo "Installing brew packages..."
 
-# Install GNU core utilities (those that come with OS X are outdated).
+# Install GNU core utilities (those that come with OS X have a different confusing API).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
 
@@ -27,21 +24,9 @@ brew install homebrew/dupes/openssh
 brew install git wget
 
 # Python
-brew install python
 brew install python3
 
-# Javascript tools and Node
-brew install node
-brew install jq
-
-# Ruby
-brew install rbenv ruby-build
-
 # SSH
-
-# Tunnel SSH through HTTP proxies (for ssh/git behind corporate proxy)
-brew install corkscrew
-# Copy id (avoids entering passwd every time)
 brew install ssh-copy-id
 
 # Other
@@ -51,14 +36,15 @@ brew install pandoc
 # Casks
 ###
 
+# TODO redo
+
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap caskroom/fonts
 
 # Dev tools
-brew cask install atom macvim gitx iterm2
+brew cask install atom macvim iterm2
 brew cask install virtualbox
-brew cask install java eclipse-java java7
 brew cask install font-dejavu-sans-mono-for-powerline
 
 # Browsers
