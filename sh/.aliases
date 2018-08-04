@@ -1,0 +1,31 @@
+###
+# Common
+###
+
+alias ls="ll"
+alias ll="ls -ltrGah"
+alias LS="ll" # Fuck Caps Lock
+alias ..="cd .."
+alias ...="cd .. && cd .."
+alias grp="grep -rins -C 3"
+alias cp="cp -rvf"
+
+###
+# Git
+###
+
+alias gs="git status"
+alias GS="gs" # Fuck off, ghost script
+
+
+###
+# MacVim + Zshell
+###
+
+alias mvim="nocorrect mvim"
+
+###
+# Data science tools
+###
+
+alias jup='jupyter notebook'
