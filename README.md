@@ -19,8 +19,8 @@ sudo softwareupdate -ia --verbose
 
 # Install brew
 
-Follow instructions from `brew.sh` or use:
+To be safe, follow instructions from `brew.sh` or use:
 
-```
+```sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
