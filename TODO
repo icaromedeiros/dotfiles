@@ -1,4 +1,0 @@
-- Remove Makefile dependency (adopt https://github.com/donnemartin/dev-setup)?
-- Think about a way to git clone dotfiles to ~/workspace/dotfiles (or configured DIR) before
-applying zsh and iTerm configs, as it tries to read from ~/workspace/dotfiles
-- Add github SSH keys automatically (review https://gist.github.com/ccashwell/4042214 and fix curl request)
