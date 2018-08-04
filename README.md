@@ -1,3 +1,10 @@
+# Disclaimer
+
+This is for my own personal use.
+Some stuff might not work for you.
+
+http://www.icaromedeiros.com.br/dotfiles-what-they-are-why-you-need-one-where-they-live-how-to-do-it.html
+
 # Before everything
 
 Download dotfiles-master:
