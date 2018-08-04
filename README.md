@@ -1,9 +1,10 @@
 # Disclaimer
 
 This is for my own personal use.
-Some stuff might not work for you.
+Some stuff might not work for you but it is shared here because it's important :)
 
-http://www.icaromedeiros.com.br/dotfiles-what-they-are-why-you-need-one-where-they-live-how-to-do-it.html
+
+Some of mu thoughts on the topic: http://www.icaromedeiros.com.br/dotfiles-what-they-are-why-you-need-one-where-they-live-how-to-do-it.html
 
 # Before everything
 
