@@ -1,23 +1,11 @@
 [user]
-    name = Icaro Medeiros
+    name = Ícaro Medeiros
     email = icaro.medeiros@gmail.com
-[color]
-    diff = auto
-    status = auto
-[push]
-    default = upstream
-[filter "media"]
-    clean = git-media-clean %f
-    smudge = git-media-smudge %f
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-[url "https://github.com/"]
-	insteadOf = git://github.com/
-# Meld
+###
+# Diff & Meld
+##
 [diff]
   tool = meld
 [difftool]
