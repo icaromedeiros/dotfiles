@@ -64,6 +64,9 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
+
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
