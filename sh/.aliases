@@ -11,8 +11,6 @@ alias ..='cd ..'
 alias ...='cd .. && cd ..'
 alias grp='grep -rins -C 3'
 
-alias xubi='echo xubiru'
-
 ###
 # Git
 ###
