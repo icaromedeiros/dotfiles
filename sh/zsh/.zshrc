@@ -22,12 +22,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-
 # Load shell-agnostic aliases and vars
 source $HOME/.aliases
 source $HOME/.vars
 
-# MacOS (brew) specific, GNU utils take precedence
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
-alias ls="gls --color=always"
+# Load MacOS-specific configs, such as PATH with GNU utils first
+source $HOME/.mac_zshrc

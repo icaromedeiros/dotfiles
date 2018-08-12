@@ -1,0 +1,19 @@
+###
+# MacOS (brew) specific
+###
+
+# GNU utils take precedence
+UTILS_PATH="$(brew --prefix coreutils)/libexec/gnubin"
+FIND_PATH="$(brew --prefix findutils)/libexec/gnubin"
+GREP_PATH="$(brew --prefix grep)/libexec/gnubin"
+GNU_PATHS="${UTILS_PATH}:${FIND_PATH}:${GREP_PATHS}"
+
+# Brewed curl
+CURL_PATH="/usr/local/opt/curl/bin"
+
+PATH="${GNU_PATHS}:${CURL_PATH}:$PATH"
+
+MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+
+# Fix colors and use GNU ls
+alias ls="gls --color=always"
