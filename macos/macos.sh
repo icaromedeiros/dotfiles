@@ -38,6 +38,7 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
 # Disable sound effects
 defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
+defaults write com.apple.sound.beep.feedback -int 0
 
 # Disable the sound effects on boot
 nvram SystemAudioVolume=" "
