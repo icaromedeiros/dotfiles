@@ -1,23 +1,32 @@
-alias ls="ll"
-alias ll="ls -ltrGah"
-alias LS="ll" # Fuck Caps Lock
-alias ..="cd .."
-alias ...="cd .. && cd .."
-alias grp="grep -rins -C 3"
-alias cp="cp -rvf"
+# Note: some aliases are duplicate of Oh-My-Zsh aliases
+# Here just to maintain consistency on non-zsh envs
+
+###
+# Common
+###
+
+alias ll='ls -ltrGah'
+alias LS='ls' # Fuck Caps Lock
+alias ..='cd ..'
+alias ...='cd .. && cd ..'
+alias grp='grep -rins -C 3'
+
+alias xubi='echo xubiru'
 
 ###
 # Git
 ###
 
-alias gs="git status"
-alias GS="gs" # Fuck off, ghost script
+# Other than Oh-my-ZSH git aliases
+
+alias gs='git status'
+alias GS='gs' # Fuck off, ghost script
 
 ###
-# MacVim + Zshell
+# MacVim
 ###
 
-alias mvim="nocorrect mvim"
+alias mvim='nocorrect mvim'
 
 ###
 # Data science tools
