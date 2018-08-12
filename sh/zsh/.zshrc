@@ -17,7 +17,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # cp: copy with progress bar
 plugins=(
-  git web-search
+  git web-search zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
