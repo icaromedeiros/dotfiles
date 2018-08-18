@@ -1,16 +1,15 @@
-" no vi-compatible
-set nocompatible
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
 
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
+if &compatible
   set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle'))
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -44,8 +43,6 @@ NeoBundle 'ervandew/supertab'
 " Scala highlighting
 NeoBundle 'derekwyatt/vim-scala'
 
-
-" Required:
 call neobundle#end()
 
 " Required:
@@ -55,21 +52,14 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-" You can specify revision/branch/tag.
-"NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-
 "End NeoBundle Scripts-------------------------
 
+""""""""""""""""""""""""""
+" Pretty great differences
+""""""""""""""""""""""""""
 
-"""""""""""""""""""
-"""""""""""""""""""
-""" MY OPTIONS    "
-"""""""""""""""""""
-"""""""""""""""""""
-
-"""""""""""""""""""""""""""
-"" pretty great differences
-"""""""""""""""""""""""""""
+" syntax highlighting
+syntax on
 
 " map leader -- for shortcuts: \ is far way , is better
 let mapleader=","
@@ -77,97 +67,9 @@ let mapleader=","
 " no need to SHIFT to use commands :)
 nnoremap ; :
 
-
-"""""""""""""""""""""""""""""
-"" NeoBundle packages options
-"""""""""""""""""""""""""""""
-
-" syntastic options
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_javascript_jshint_exec = 'jshint'
-let g:syntastic_javascript_jshint_post_args = '--config ~/.jshintrc'
-
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_post_args='--ignore=E501,W293'
-
-let g:syntastic_tex_checkers = ['chktex', 'atdtool']
-" ignored rules
-" 1: command terminated with a space (e.g. \printbibliography without {})
-" 2: ignores ~\ref warnings
-" 11: ldots instead of .. (conflicts with directory up)
-let g:syntastic_tex_chktex_post_args='-n1 -n2 -n11'
-
-let g:syntastic_check_on_open=1
-
-" To debug syntastic
-"let g:syntastic_debug = 3
-
-" vim-airline options
-let g:airline#extensions#tabline#enabled = 1
-" Show only filename, not full path
-let g:airline#extensions#tabline#fnamemod = ':p:t'
-" Do not show tab number
-let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#branch#enabled = 1
-let g:airline_powerline_fonts=1
-
-" powerline options
-let g:Powerline_symbols = 'fancy'
-
-""""""""""""""
-"" Visual shit
-""""""""""""""
-
-color jellybeans
-
-" jellybeans options
-let g:jellybeans_overrides = {
-\    'Search': { 'guifg': 'e32636', 'guibg': '302028',
-\                'ctermfg': 'Black', 'ctermbg': 'Yellow',
-\                'attr': 'bold' },
-\    'Todo': { 'guifg': 'f63232', 'guibg': 'f1e905',
-\                'ctermfg': 'Magenta', 'ctermbg': 'Yellow',
-\                'attr': 'bold' }
-\}
-
-" The chosen one because it has italic, bold, etc
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h20
-set encoding=utf-8
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-set termencoding=utf-8
-
-"""""""""""""""""""""""""""""
-"" file and nerd-tree options
-"""""""""""""""""""""""""""""
-nmap <leader>n :NERDTreeToggle<CR>
-
-let NERDTreeShowHidden=1
-
-" ignored files
-set suffixes=.swp,.bak,~,.pyc,.class,.so,.zip,.DS_Store,.orig
-
-" NERDTree ignore the same files
-let NERDTreeIgnore = ['__pycache__']
-for suffix in split(&suffixes, ',')
-    let escaped_suffix = [ escape(suffix, '.~') . '$' ]
-    let NERDTreeIgnore += escaped_suffix
-endfor
-
-""""""""""
-"" flake8
-""""""""""
-
-" run pep8+pyflakes validator
-autocmd FileType python map <buffer> ,8 :call Flake8()<CR>
-" rules to ignore (example: "E501,W293")
-let g:flake8_ignore="E501,W293"
-" don't let pyflakes allways override the quickfix list
-let g:pyflakes_use_quickfix = 0
-
-""""""""""
-"" search
-""""""""""
+""""""""
+" Search
+""""""""
 
 " highlighted search results
 set hlsearch
@@ -214,6 +116,80 @@ function! TrimWhiteSpace()
 :endfunction
 map <leader>w :call TrimWhiteSpace()<CR>
 
+"""""""""""""""""""""""""""""
+"" NeoBundle packages options
+"""""""""""""""""""""""""""""
+
+" syntastic options
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_post_args='--ignore=E501,W293'
+
+" To debug syntastic
+"let g:syntastic_debug = 3
+
+" vim-airline options
+let g:airline#extensions#tabline#enabled = 1
+" Show only filename, not full path
+let g:airline#extensions#tabline#fnamemod = ':p:t'
+" Do not show tab number
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#branch#enabled = 1
+let g:airline_powerline_fonts=1
+
+" powerline options
+let g:Powerline_symbols = 'fancy'
+
+""""""""""""""
+"" Visual shit
+""""""""""""""
+
+colorscheme jellybeans
+
+" jellybeans options
+let g:jellybeans_overrides = {
+\    'Search': { 'guifg': 'e32636', 'guibg': '302028',
+\                'ctermfg': 'Black', 'ctermbg': 'Yellow',
+\                'attr': 'bold' },
+\    'Todo': { 'guifg': 'f63232', 'guibg': 'f1e905',
+\                'ctermfg': 'Magenta', 'ctermbg': 'Yellow',
+\                'attr': 'bold' }
+\}
+
+" The chosen one because it has italic, bold, etc
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h20
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set termencoding=utf-8
+
+"""""""""""""""""""""""""""""
+"" File and NERD-Tree options
+"""""""""""""""""""""""""""""
+
+nmap <leader>n :NERDTreeToggle<CR>
+
+let NERDTreeShowHidden=1
+
+" ignored files
+set suffixes=.swp,.bak,~,.pyc,.class,.so,.zip,.DS_Store,.orig
+
+" NERDTree ignore the same files
+let NERDTreeIgnore = ['__pycache__']
+for suffix in split(&suffixes, ',')
+    let escaped_suffix = [ escape(suffix, '.~') . '$' ]
+    let NERDTreeIgnore += escaped_suffix
+endfor
+
+""""""""""
+"" Flake8
+""""""""""
+
+" run pep8+pyflakes validator
+autocmd FileType python map <buffer> ,8 :call Flake8()<CR>
+" rules to ignore (example: "E501,W293")
+let g:flake8_ignore="E501,W293"
+" don't let pyflakes allways override the quickfix list
+let g:pyflakes_use_quickfix = 0
 
 """"""""""""""""""""""""""""""""""
 "" LIST OF SHORTCUTS AND MNEMONICS
