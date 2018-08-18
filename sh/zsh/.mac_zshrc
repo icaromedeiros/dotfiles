@@ -9,9 +9,12 @@ GREP_PATH="$(brew --prefix grep)/libexec/gnubin"
 GNU_PATHS="${UTILS_PATH}:${FIND_PATH}:${GREP_PATHS}"
 
 # Brewed curl
-CURL_PATH="/usr/local/opt/curl/bin"
+CURL_PATH="$(brew --prefix curl)/bin"
 
-PATH="${GNU_PATHS}:${CURL_PATH}:$PATH"
+# Brewed Python 3 (do not confuse with $PYTHONPATH)
+PYTHON3_PATH="$(brew --prefix python)/libexec/bin"
+
+PATH="${GNU_PATHS}:${CURL_PATH}:${PYTHON3_PATH}:$PATH"
 
 MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 

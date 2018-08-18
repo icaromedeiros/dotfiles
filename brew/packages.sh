@@ -70,6 +70,7 @@ brew cask install font-dejavu-sans-mono-for-powerline
 # Dev tools
 brew cask install atom macvim iterm2 meld
 brew cask install virtualbox docker
+brew cask install nteract
 
 # Browsers
 brew cask install firefox google-chrome
@@ -80,12 +81,17 @@ brew cask install spotify vuze simple-comic vlc steam
 # Communication
 brew cask install slack skype telegram
 
+# Backup
+brew cask install dropbox google-photos-backup-and-sync
+
 # Other
-brew cask install android-file-transfer caffeine dropbox evernote spectacle flux flycut
+brew cask install android-file-transfer caffeine evernote spectacle flux flycut
 
 # Install developer friendly quick look plugins;
 #  see https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo quicklook-csv
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
+                  qlimagesize webpquicklook suspicious-package \
+                  quicklookase qlvideo quicklook-csv jupyter-notebook-ql
 
 ###
 # Cleanup

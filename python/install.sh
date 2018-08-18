@@ -8,15 +8,6 @@ echo "Installing Python global packages..."
 pip install --upgrade setuptools
 pip install --upgrade pip
 
-# Virtualenv
-pip install virtualenv
-pip install virtualenvwrapper
-
-# pep8 utils and test
-pip install pep8
-pip install flake8
-pip install nose
-
 # Data Science tools
 pip install numpy
 pip install scipy
