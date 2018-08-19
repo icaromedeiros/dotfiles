@@ -68,7 +68,7 @@ brew tap caskroom/fonts
 brew cask install font-dejavu-sans-mono-for-powerline
 
 # Dev tools
-brew cask install atom macvim iterm2 meld
+brew cask install atom macvim visual-studio-code iterm2 meld
 brew cask install virtualbox docker
 brew cask install nteract
 
