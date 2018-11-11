@@ -17,6 +17,12 @@ Update software:
 sudo softwareupdate -ia --verbose
 ```
 
+Brew without Xcode, please.
+
+```sh
+sudo xcode-select --switch /Library/Developer/CommandLineTools
+```
+
 # Install brew
 
 To be safe, follow instructions from `brew.sh` or use:

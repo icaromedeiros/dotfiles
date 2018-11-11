@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+  #!/usr/bin/env bash
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -47,7 +47,7 @@ brew install curl
 brew install git wget axel
 
 # Python
-brew install python3
+brew install python3 pipenv
 
 # Other
 brew install gollum pandoc
@@ -66,6 +66,9 @@ brew cask install logitech-options
 # Fonts
 brew tap caskroom/fonts
 brew cask install font-dejavu-sans-mono-for-powerline
+
+# Anaconda Python
+brew cask install anaconda
 
 # Dev tools
 brew cask install atom macvim visual-studio-code iterm2 meld

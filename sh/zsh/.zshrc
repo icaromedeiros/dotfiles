@@ -27,4 +27,31 @@ source $HOME/.aliases
 source $HOME/.vars
 
 # Load MacOS-specific configs, such as PATH with GNU utils first
-source $HOME/.mac_zshrc
+# FIXME not working, just copying below
+# source $HOME/.mac_zshrc
+
+###
+# MacOS (brew) specific
+###
+
+# GNU utils take precedence
+UTILS_PATH="/usr/local/opt/coreutils/libexec/gnubin"
+FIND_PATH="/usr/local/opt/findutils/libexec/gnubin"
+GREP_PATH="/usr/local/opt/grep/libexec/gnubin"
+GNU_PATHS="${UTILS_PATH}:${FIND_PATH}:${GREP_PATHS}"
+
+# Brewed curl
+CURL_PATH="/usr/local/opt/curl/bin"
+
+# Anaconda Python 3
+ANACONDA_PATH="/usr/local/anaconda3/bin"
+
+# Brewed Python 3 (do not confuse with $PYTHONPATH)
+PYTHON3_PATH="/usr/local/opt/python/libexec/bin"
+
+# Paths
+PATH="${GNU_PATHS}:${CURL_PATH}:${ANACONDA_PATH}:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# Fix colors and use GNU ls
+alias ls="gls --color=always"
