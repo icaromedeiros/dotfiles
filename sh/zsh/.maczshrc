@@ -12,7 +12,7 @@ GNU_PATHS="${UTILS_PATH}:${FIND_PATH}:${GREP_PATHS}"
 CURL_PATH="/usr/local/opt/curl/bin"
 
 # Anaconda Python 3
-ANACONDA_PATH ="/usr/local/anaconda3/bin"
+ANACONDA_PATH="/usr/local/anaconda3/bin"
 
 # Brewed Python 3 (do not confuse with $PYTHONPATH)
 PYTHON3_PATH="/usr/local/opt/python/libexec/bin"

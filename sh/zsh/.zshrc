@@ -17,7 +17,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # cp: copy with progress bar
 plugins=(
-  git web-search zsh-autosuggestions
+  git zsh-autosuggestions pyenv python
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -47,11 +47,12 @@ CURL_PATH="/usr/local/opt/curl/bin"
 ANACONDA_PATH="/usr/local/anaconda3/bin"
 
 # Brewed Python 3 (do not confuse with $PYTHONPATH)
-PYTHON3_PATH="/usr/local/opt/python/libexec/bin"
+PYTHON3_PATH="/usr/local/Cellar/python/3.7.4/bin:${HOME}/Library/Python/3.7/bin"
 
-# Paths
-PATH="${GNU_PATHS}:${CURL_PATH}:${ANACONDA_PATH}:$PATH"
+PATH="${GNU_PATHS}:${CURL_PATH}:${PYTHON3_PATH}:${PATH}"
+
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # Fix colors and use GNU ls
 alias ls="gls --color=always"
+export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
