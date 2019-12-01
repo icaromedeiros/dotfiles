@@ -29,7 +29,7 @@ brew install grep
 
 ###
 # Other system packages to override
-#  (prevents outdated CLI tools)
+#  (prevents outdated CLI or Apple tools)
 ###
 
 brew install vim --override-system-vi
@@ -49,8 +49,17 @@ brew install git wget axel
 # Python
 brew install python3 pipenv
 
+# Azure
+brew install azure-cli
+brew cask install microsoft-azure-storage-explorer
+
+## NPM-based Azure tools
+brew install npm
+npm install -g azure-functions-core-tools
+npm install -g azurite
+
 # Other
-brew install gollum pandoc
+brew install gollum pandoc howdoi
 
 ###
 # Casks
@@ -71,9 +80,12 @@ brew cask install font-dejavu-sans-mono-for-powerline
 brew cask install anaconda
 
 # Dev tools
-brew cask install atom macvim visual-studio-code iterm2 meld
-brew cask install virtualbox docker
-brew cask install nteract
+brew cask install macvim visual-studio-code iterm2 meld
+brew cask install docker
+brew install httpie
+
+# Microsoft & Azure tools
+brew cask install microsoft-teams mono-mdk microsoft-azure-storage-explorer
 
 # Browsers
 brew cask install firefox google-chrome
@@ -82,13 +94,13 @@ brew cask install firefox google-chrome
 brew cask install spotify vuze simple-comic vlc steam
 
 # Communication
-brew cask install slack skype telegram
+brew cask install skype telegram
 
 # Backup
 brew cask install dropbox google-photos-backup-and-sync
 
 # Other
-brew cask install android-file-transfer caffeine evernote spectacle flux flycut
+brew cask install android-file-transfer caffeine notable spectacle flux
 
 # Install developer friendly quick look plugins;
 #  see https://github.com/sindresorhus/quick-look-plugins
