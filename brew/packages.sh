@@ -46,8 +46,8 @@ brew install curl
 # Download tools
 brew install git wget axel
 
-# Python
-brew install python3 pipenv
+# Python 
+#  In python/python.sh & python/packages.sh
 
 # Azure
 brew install azure-cli
@@ -75,9 +75,6 @@ brew cask install logitech-options
 # Fonts
 brew tap caskroom/fonts
 brew cask install font-dejavu-sans-mono-for-powerline
-
-# Anaconda Python
-brew cask install anaconda
 
 # Dev tools
 brew cask install macvim visual-studio-code iterm2 meld

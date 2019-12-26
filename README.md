@@ -8,7 +8,7 @@ Some of my thoughts on the topic are [in my blog]
 
 # Before everything
 
-Download dotfiles-master:
+Download dotfiles-master (because you still don't have git):
 `https://github.com/icaromedeiros/dotfiles/archive/master.zip`
 
 Update software:
@@ -17,7 +17,7 @@ Update software:
 sudo softwareupdate -ia --verbose
 ```
 
-Brew without Xcode, please.
+Brew without the need of Xcode, please.
 
 ```sh
 sudo xcode-select --switch /Library/Developer/CommandLineTools
@@ -30,3 +30,11 @@ To be safe, follow instructions from `brew.sh` or use:
 ```sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+
+# Install Python / Pyenv
+
+Install Python first than others formulas `sh python/python.sh`
+
+# Brew packages install
+
+`sh brew/packages.sh`
