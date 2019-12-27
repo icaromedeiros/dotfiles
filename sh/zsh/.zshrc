@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/icaromedeiros/.oh-my-zsh"
+export ZSH="/Users/icaro/.oh-my-zsh"
 
 ZSH_THEME="icaro"
 
@@ -26,10 +26,6 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.vars
 
-# Load MacOS-specific configs, such as PATH with GNU utils first
-# FIXME not working, just copying below
-# source $HOME/.mac_zshrc
-
 ###
 # MacOS (brew) specific
 ###
@@ -44,12 +40,13 @@ GNU_PATHS="${UTILS_PATH}:${FIND_PATH}:${GREP_PATHS}"
 CURL_PATH="/usr/local/opt/curl/bin"
 
 # Anaconda Python 3
-ANACONDA_PATH="/usr/local/anaconda3/bin"
+#ANACONDA_PATH="/usr/local/anaconda3/bin"
 
 # Brewed Python 3 (do not confuse with $PYTHONPATH)
-PYTHON3_PATH="/usr/local/Cellar/python/3.7.4/bin:${HOME}/Library/Python/3.7/bin"
+#PYTHON3_PATH="/usr/local/Cellar/python/3.7.4/bin:${HOME}/Library/Python/3.7/bin"
 
-PATH="${GNU_PATHS}:${CURL_PATH}:${PYTHON3_PATH}:${PATH}"
+#PATH="${GNU_PATHS}:${CURL_PATH}:${PYTHON3_PATH}:${PATH}"
+PATH="${GNU_PATHS}:${CURL_PATH}:${PATH}"
 
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
