@@ -85,7 +85,7 @@ brew install httpie
 brew cask install microsoft-teams mono-mdk microsoft-azure-storage-explorer
 
 # Browsers
-brew cask install firefox google-chrome
+brew cask install brave-browser google-chrome firefox 
 
 # (Free)? entertainment and Civilization
 brew cask install spotify vuze simple-comic vlc steam
@@ -97,7 +97,7 @@ brew cask install skype telegram
 brew cask install dropbox google-photos-backup-and-sync
 
 # Other
-brew cask install android-file-transfer caffeine notable spectacle flux
+brew cask install android-file-transfer caffeine notable spectacle
 
 # Install developer friendly quick look plugins;
 #  see https://github.com/sindresorhus/quick-look-plugins
