@@ -1,0 +1,32 @@
+{
+    "editor.fontFamily": "'DejaVu Sans Mono for Powerline', 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [120],
+    "editor.detectIndentation": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "files.eol": "\n",
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.fontSize": 16,
+    "git.confirmSync": false,
+    "git.fetchOnPull": true,
+    "git.enableSmartCommit": true,
+    "search.useIgnoreFiles": false,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-c>": false,
+        "<C-w>": false,
+        "<C-k>": false,
+        "<C-x>": false,
+        "<C-,>": false,
+        "<C-n>": false
+      },
+    "vim.startInInsertMode": true,
+    "window.zoomLevel": 0,
+    "http.proxyStrictSSL": false,
+    "team.showWelcomeMessage": false,
+    "telemetry.enableTelemetry": false
+}
