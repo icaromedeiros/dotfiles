@@ -35,7 +35,6 @@ brew install grep
 brew install vim --override-system-vi
 
 brew install openssh
-brew install ssh-copy-id
 
 brew install curl
 
@@ -49,14 +48,25 @@ brew install git wget axel
 # Python 
 #  In python/python.sh & python/packages.sh
 
+###
 # Azure
+###
+
 brew install azure-cli
+
+# Needed for Azure DevOps
+brew install git-credential-manager
+
 brew cask install microsoft-azure-storage-explorer
 
-## NPM-based Azure tools
+# NPM-based Azure tools
 brew install npm
 npm install -g azure-functions-core-tools
-npm install -g azurite
+#npm install -g azurite
+
+# Scala
+brew cask install homebrew/cask-versions/adoptopenjdk8
+brew install scala@2.11 sbt
 
 # Other
 brew install gollum pandoc howdoi
@@ -81,14 +91,11 @@ brew cask install macvim visual-studio-code iterm2 meld
 brew cask install docker
 brew install httpie
 
-# Microsoft & Azure tools
-brew cask install microsoft-teams mono-mdk microsoft-azure-storage-explorer
-
 # Browsers
 brew cask install brave-browser google-chrome firefox 
 
 # (Free)? entertainment and Civilization
-brew cask install spotify vuze simple-comic vlc steam
+brew cask install spotify simple-comic vlc steam
 
 # Communication
 brew cask install skype telegram
