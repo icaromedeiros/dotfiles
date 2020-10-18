@@ -9,8 +9,8 @@ alias ll='ls -ltrGah'
 alias LS='ls' # Fuck Caps Lock
 alias ..='cd ..'
 alias ...='cd .. && cd ..'
-alias grep='grep --color=auto --exclude-dir={.git}'
-alias grp='grep -rins -C 3'
+#alias grep='grep --color=auto --exclude-dir={.git}'
+#alias grp='grep -rins -C 3'
 
 ###
 # Git
@@ -32,3 +32,13 @@ alias mvim='nocorrect mvim'
 ###
 
 alias jup='jupyter notebook'
+
+###
+# Rust CLI tools
+###
+
+alias find=fd
+alias procs=ps
+alias du=dust
+alias grep=rg
+alias tldr=tealdeer

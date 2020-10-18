@@ -22,17 +22,22 @@ brew install coreutils
 brew install findutils
 
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+# TODO check path as --with-default-names is not supported anymore
+brew install gnu-sed
 
 # Install GNU grep
 brew install grep
+
+# Rust-rewritten CLI
+brew install bat fd procs dust ripgrep tealdeer fzf exa
 
 ###
 # Other system packages to override
 #  (prevents outdated CLI or Apple tools)
 ###
 
-brew install vim --override-system-vi
+# TODO fix path to prefer brewed vim
+brew install vim
 
 brew install openssh
 
@@ -66,7 +71,9 @@ npm install -g azure-functions-core-tools
 
 # Scala
 brew cask install homebrew/cask-versions/adoptopenjdk8
-brew install scala@2.11 sbt
+brew install scala@2.11
+
+# FIXME sbt depends on gcc, but do I really use it?
 
 # Other
 brew install gollum pandoc howdoi
@@ -83,7 +90,7 @@ brew tap homebrew/cask-drivers
 brew cask install logitech-options
 
 # Fonts
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install font-dejavu-sans-mono-for-powerline
 
 # Dev tools

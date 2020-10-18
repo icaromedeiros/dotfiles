@@ -12,8 +12,8 @@ cp -f .vars $HOME
 
 ## Fish-like autosuggestions zsh
 
-git clone https://github.com/zsh-users/zsh-autosuggestions \
-  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+#git clone https://github.com/zsh-users/zsh-autosuggestions \
+#  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Load theme and .zshrc
 cp -f zsh/icaro.zsh-theme $HOME/.oh-my-zsh/themes

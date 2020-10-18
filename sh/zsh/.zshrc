@@ -39,17 +39,14 @@ GNU_PATHS="${UTILS_PATH}:${FIND_PATH}:${GREP_PATHS}"
 # Brewed curl
 CURL_PATH="/usr/local/opt/curl/bin"
 
-# Anaconda Python 3
-#ANACONDA_PATH="/usr/local/anaconda3/bin"
+# Pyenv path
+PYTHON_PATH=$(pyenv root)/shims
 
-# Brewed Python 3 (do not confuse with $PYTHONPATH)
-#PYTHON3_PATH="/usr/local/Cellar/python/3.7.4/bin:${HOME}/Library/Python/3.7/bin"
-
-#PATH="${GNU_PATHS}:${CURL_PATH}:${PYTHON3_PATH}:${PATH}"
-PATH="${GNU_PATHS}:${CURL_PATH}:${PATH}"
+PATH="${GNU_PATHS}:${PYTHON_PATH}:${CURL_PATH}:${PATH}"
 
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # Fix colors and use GNU ls
 alias ls="gls --color=always"
+
 export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
