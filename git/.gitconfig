@@ -20,8 +20,10 @@
 [mergetool "meld"]
   trustExitCode = true
   cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
+[pull]
+	rebase = false
 [credential]
 	helper = 
-	helper = manager-core
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
 [credential "https://dev.azure.com"]
 	useHttpPath = true

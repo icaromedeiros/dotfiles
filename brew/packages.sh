@@ -111,7 +111,7 @@ brew cask install skype telegram
 brew cask install dropbox google-photos-backup-and-sync
 
 # Other
-brew cask install android-file-transfer caffeine notable spectacle
+brew cask install android-file-transfer caffeine notable spectacle clipy
 
 # Install developer friendly quick look plugins;
 #  see https://github.com/sindresorhus/quick-look-plugins
