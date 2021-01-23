@@ -104,11 +104,14 @@ brew cask install brave-browser google-chrome firefox
 # (Free)? entertainment and Civilization
 brew cask install spotify simple-comic vlc steam
 
+# Blogging
+brew install hugo
+
 # Communication
 brew cask install skype telegram
 
 # Backup
-brew cask install dropbox google-photos-backup-and-sync
+brew cask install dropbox onedrive google-photos-backup-and-sync
 
 # Other
 brew cask install android-file-transfer caffeine notable spectacle clipy
