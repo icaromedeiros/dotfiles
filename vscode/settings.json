@@ -9,7 +9,6 @@
     "explorer.confirmDelete": false,
     "workbench.colorTheme": "Monokai",
     "workbench.editor.enablePreview": false,
-    "terminal.integrated.fontSize": 16,
     "git.confirmSync": false,
     "git.fetchOnPull": true,
     "git.enableSmartCommit": true,
@@ -25,8 +24,31 @@
         "<C-n>": false
       },
     "vim.startInInsertMode": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "http.proxyStrictSSL": false,
     "team.showWelcomeMessage": false,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "cSpell.userWords": [
+        "Devops",
+        "adls",
+        "jsons",
+        "todos"
+    ],
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontSize": 16,
+    "terminal.explorerKind": "external",
+    "terminal.integrated.enableBell": true,
+    "jupyter.askForKernelRestart": false,
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "java.project.importHint": false,
+    "azureFunctions.showCoreToolsWarning": false,
 }
